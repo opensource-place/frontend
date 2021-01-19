@@ -1,7 +1,5 @@
 import React from "react";
-import { NavBar } from "../components/nav-bar";
-import { IssueList } from "../components/issue-list";
-import ProjectList from "../components/project-list";
+import { IssueList, ProjectList, NavBar } from "../components/";
 
 const Projects = () => {
   return (

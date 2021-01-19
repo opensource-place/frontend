@@ -1,6 +1,5 @@
 import React from "react";
-import { NavBar } from "../components/nav-bar";
-import { Footer } from "../components/footer";
+import { Footer, NavBar } from "../components";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
