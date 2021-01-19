@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export const IssueList = (props) => {
+ const IssueList = (props) => {
   const [issues, setIssues] = useState([]);
 
   useEffect(() => {
@@ -11,8 +11,8 @@ export const IssueList = (props) => {
   const dataFetch = () => {
     let url =
       "https://api.github.com/repos/" + props.repository_slug + "/issues";
-    axios.
-    get(url).then((res) => {
+    axios
+    .get(url).then((res) => {
       const issues = res.data;
       setIssues(issues);
     });
@@ -26,3 +26,5 @@ export const IssueList = (props) => {
     </li>
   ));
 };
+
+export default IssueList

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavBar } from "../components/nav-bar";
+import { NavBar } from "../components";
 import axios from "axios";
 
 const Start = () => {

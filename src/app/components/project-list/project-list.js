@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { ProjectCard } from "./project-card";
-import SearchBox from "./search-box";
+import ProjectCard from "../project-card/project-card";
+import SearchBox from "../search-box/search-box";
 import axios from "axios";
 
 const ProjectList = () => {

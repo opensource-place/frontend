@@ -1,4 +1,4 @@
-export const ProjectCard = ({ repoData }) => {
+const ProjectCard = ({ repoData }) => {
   console.log(repoData);
   return (
     <div className="p-3 bg-green-300 w-1/4 dark:bg-gray-900 bg-gray-100 m-2">
@@ -7,3 +7,6 @@ export const ProjectCard = ({ repoData }) => {
     </div>
   );
 };
+
+export default ProjectCard
+
