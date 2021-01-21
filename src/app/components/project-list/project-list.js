@@ -6,6 +6,7 @@ import axios from "axios";
 const ProjectList = () => {
   const [repositorySlugList, setRepositorySlugList] = useState([]);
   const [filteredRepositories, setFilteredRepositories] = useState([]);
+  const [repositories, setRepositories] = useState([]);
   const [searchField, setSearchField] = useState("");
 
   useEffect(() => {
@@ -21,11 +22,19 @@ const ProjectList = () => {
   };
 
   const dataFetch = () => {
-    let url = process.env.REACT_APP_API_URL;
-    axios.get(`${url}/start/repos`).then((res) => {
-      const project_info = res.data;
-      setRepositorySlugList(project_info);
-      setFilteredRepositories(project_info);
+    const query = `
+        {
+          repositories {
+            pathname
+            issues {
+              title
+            }
+          }
+        }`;
+
+    axios.get(`http://localhost:8080/graphql?query=${query}`).then((res) => {
+      const { repositories } = res.data.data;
+      setRepositories(repositories);
     });
   };
 
@@ -36,8 +45,8 @@ const ProjectList = () => {
         handleChange={(e) => handleChange(e)}
       />
       <div className="flex">
-        {filteredRepositories.map((e, index) => (
-          <ProjectCard key={index} repoData={e} />
+        {repositories.map((data, index) => (
+          <ProjectCard key={index} repository={data} />
         ))}
       </div>
     </div>

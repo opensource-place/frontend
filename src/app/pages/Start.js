@@ -9,9 +9,9 @@ const Start = () => {
 
   const addIssue = (e) => {
     e.preventDefault();
-    const url = process.env.REACT_APP_API_URL;
+    const url = 'http://localhost:8080';
     axios
-      .post(`${url}/start/repos`, {
+      .post(`${url}/repository`, {
         url: issue,
       })
       .then(({ data }) => {
