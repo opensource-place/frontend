@@ -1,32 +1,59 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+`;
+const Navbar = styled.nav`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
+const ItemsWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 100vw;
+`;
+const LogoAndText = styled.div`
+    display: flex;
+    align-items: center;
+`;
+const Menus = styled.div`
+    margin-left: 0.5rem;
+`;
 
 export const NavBar = () => (
-  <div className="flex justify-between items-center dark:bg-gray-900 bg-gray-100">
-    <nav className="flex-row md:justify-between items-center">
-      <div className="flex justify-between items-center w-screen px-4 py-2">
-        <Link to="/">
-          <div className="flex items-center">
-            <img className="h-12 mr-2" src="/logo.png" alt="Our Logo" />
-            <h1 className="hover:text-green-500 hidden md:block">
-              Open Source Adam
-            </h1>
-          </div>
-        </Link>
-        <div className="ml-2" id="mobileMenu">
-          <Link to="/projects" className="ml-3">
-            Projects
-          </Link>
-          <Link to="/doc" className="ml-3">
-            Documents
-          </Link>
-          <Link to="/login" className="ml-3 primary-button">
-            Login
-          </Link>
-        </div>
-      </div>
-    </nav>
-  </div>
+    <Wrapper>
+        <Navbar>
+            <ItemsWrapper>
+                <Link to="/">
+                    <LogoAndText>
+                        <img width="50px" src="/logo2.png" alt="Our Logo" />
+                        <h1 className="hover:text-green-500 hidden md:block">
+                            Opensource.place
+                        </h1>
+                    </LogoAndText>
+                </Link>
+                <Menus id="mobileMenu">
+                    <Link to="/projects" className="ml-3">
+                        Projects
+                    </Link>
+                    <Link to="/doc" className="ml-3">
+                        Documents
+                    </Link>
+                    <Link to="/login" className="ml-3 primary-button">
+                        Login
+                    </Link>
+                </Menus>
+            </ItemsWrapper>
+        </Navbar>
+    </Wrapper>
 );
 
 export default NavBar;
