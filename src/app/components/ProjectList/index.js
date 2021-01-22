@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import ProjectCard from "../project-card/project-card";
-import SearchBox from "../search-box/search-box";
+import ProjectCard from "../ProjectCard";
+import SearchBox from "../SearchBox";
 import axios from "axios";
 
 const ProjectList = () => {
@@ -23,14 +23,14 @@ const ProjectList = () => {
 
   const dataFetch = () => {
     const query = `
-        {
-          repositories {
-            pathname
-            issues {
-              title
-            }
+      {
+        repositories {
+          pathname
+          issues {
+            title
           }
-        }`;
+        }
+    }`;
 
     axios.get(`http://localhost:8080/graphql?query=${query}`).then((res) => {
       const { repositories } = res.data.data;

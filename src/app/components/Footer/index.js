@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Footer = () => (
+const Footer = () => (
   <div className="flex flex-wrap justify-center bg-800 p-16 text-center">
     <div className="flex flex-wrap mb-4 w-full ">
       <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
