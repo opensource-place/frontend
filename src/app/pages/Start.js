@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavBar } from "../components";
 import axios from "axios";
 
@@ -7,20 +7,18 @@ const Start = () => {
   const [getDBStatus, setDBStatus] = useState(false);
   const [getDBStatusMSG, setDBStatusMSG] = useState("");
 
-  const addIssue = (e) => {
+  const addIssue = async (e) => {
     e.preventDefault();
-    const url = 'http://localhost:8080';
-    axios
-      .post(`${url}/repository`, {
-        url: issue,
-      })
-      .then(({ data }) => {
-        setDBStatus(data.result);
-        setDBStatusMSG(data.msg);
-      });
-  };
 
-  useEffect(() => {});
+    const url = 'http://localhost:8080';
+
+    const response = await axios.post(`${url}/repository`, {
+      url: issue,
+    })
+
+    setDBStatus(response.data.result)
+    setDBStatusMSG(response.data.msg)
+  };
 
   return (
     <div className="min-h-screen flex flex-col items-center dark:bg-gray-800 bg-gray-200">
