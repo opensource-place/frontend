@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavBar } from "../components";
 import Markdown from "markdown-to-jsx";
-import mdDocument from "../documentations/hello.md";
+import mdDocument from "../docs/hello.md";
 
 const Doc = () => {
   const [content, setContent] = useState("");

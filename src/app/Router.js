@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import {
     Projects,
@@ -8,20 +9,18 @@ import {
     ProjectDetail,
 } from "./pages";
 
-const Router = () => {
-    return (
-        <BrowserRouter>
-            <Route exact path="/" component={LandingPage} />
-            <Route path="/projects" component={Projects} />
-            <Route
-                path="/project/:projectname/:reponame"
-                component={ProjectDetail}
-            />
-            <Route path="/start" component={Start} />
-            <Route path="/doc" component={Doc} />
-            <Route path="/login" component={Login} />
-        </BrowserRouter>
-    );
-};
+const Router = () => (
+  <BrowserRouter>
+    <Route exact path="/" component={LandingPage} />
+    <Route path="/projects" component={Projects} />
+    <Route path="/start" component={Start} />
+    <Route path="/doc" component={Doc} />
+    <Route path="/login" component={Login} />
+    <Route
+      path="/project/:projectname/:reponame"
+      component={ProjectDetail}
+    />
+  </BrowserRouter>
+)
 
 export default Router;
