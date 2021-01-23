@@ -19,7 +19,6 @@ const Footer = () => (
       <div className='w-full sm:w-1/2 md:w-1/2 lg:w-1/3 '>
         <h3 className='text-xl py-4 flex-wrap'>Socials</h3>
         <ul>
-          <li />
           <li>
             <a
               rel='noreferrer'

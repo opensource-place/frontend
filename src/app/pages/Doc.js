@@ -7,12 +7,13 @@ const Doc = () => {
   const [content, setContent] = useState('')
 
   useEffect(() => {
-    fetch(mdDocument)
-      .then((res) => res.text())
-      .then((md) => {
-        setContent(md)
-      })
+    getMarkdown()
   })
+
+  const getMarkdown = async () => {
+    const res = await fetch(mdDocument)
+    setContent(await res.text())
+  }
 
   return (
     <div className='min-h-screen flex flex-col items-center dark:bg-gray-800 bg-gray-200'>

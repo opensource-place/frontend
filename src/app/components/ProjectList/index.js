@@ -10,7 +10,7 @@ const ProjectList = () => {
     dataFetch()
   }, [])
 
-  const dataFetch = () => {
+  const dataFetch = async () => {
     const query = `{
       repositories {
         pathname
@@ -20,10 +20,8 @@ const ProjectList = () => {
       }
     }`
 
-    axios.get(`http://localhost:8080/graphql?query=${query}`).then((res) => {
-      const { repositories } = res.data.data
-      setRepositories(repositories)
-    })
+    const res = await axios.get(`/graphql?query=${query}`)
+    setRepositories(res.data.data.repositories)
   }
 
   return (

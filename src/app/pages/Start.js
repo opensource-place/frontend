@@ -12,12 +12,12 @@ const Start = () => {
 
     const url = 'http://localhost:8080'
 
-    const response = await axios.post(`${url}/repository`, {
+    const res = await axios.post(`${url}/repository`, {
       url: issue
     })
 
-    setDBStatus(response.data.result)
-    setDBStatusMSG(response.data.msg)
+    setDBStatus(res.data.result)
+    setDBStatusMSG(res.data.msg)
   }
 
   return (
@@ -37,7 +37,7 @@ const Start = () => {
               type='text'
               className='form-control'
               onChange={(e) => setIssue(e.target.value)}
-              placeholder='GitHub Repository URL (furkanportakal/opensourceadam)'
+              placeholder='GitHub Repository URL (opensourceadam-place/wiki)'
               name='note'
             />
             <button
