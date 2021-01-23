@@ -27,7 +27,7 @@ Bear in mind that it's still in development!
 Firstly, install your dependencies!
 
 ```sh
-npm install
+yarn install
 ```
 
 Next up, create yourself a `.env` file!
@@ -40,13 +40,13 @@ REACT_APP_API_URL = {your backend api url here}
 Then you can do:
 
 ```sh
-npm start
+yarn start
 ```
 
 for a development server, or
 
 ```sh
-npm run build
+yarn run build
 ```
 
 for building the project into static, deployable files.
@@ -55,7 +55,7 @@ for building the project into static, deployable files.
 
 ## Linting
 
-> Additionally, you can do `npm run lint` to see formatting errors
-> and `npm run lint:fix` to fix them.
+> Additionally, you can do `yarn run lint` to see formatting errors
+> and `yarn run lint:fix` to fix them.
 > Don't worry if you forgot to lint your code!
 > Someone will definitely fix it in another commit for you :smiley:
