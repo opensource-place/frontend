@@ -1,7 +1,5 @@
 # Open Source Place (React Front-end)
-
-> A small picture or GIF for display needs to be put here, dunno why haven't yet.
-> Blame @FurkanPortakal.
+<p align="center"><img src="https://user-images.githubusercontent.com/56169582/105577347-083cbb80-5d8a-11eb-9973-acf01b2130c1.png" width="180px"/></p>
 
 
 
