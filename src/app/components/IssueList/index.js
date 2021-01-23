@@ -8,14 +8,9 @@ const IssueList = (props) => {
     dataFetch()
   }, [])
 
-  const dataFetch = () => {
-    const url =
-      'https://api.github.com/repos/' + props.repository_slug + '/issues'
-    axios
-      .get(url).then((res) => {
-        const issues = res.data
-        setIssues(issues)
-      })
+  const dataFetch = async () => {
+    const res = await axios.get(`/${props.repository_slug}/issues`)
+    setIssues(res.data)
   }
 
   return issues.map((issue, index) => (
