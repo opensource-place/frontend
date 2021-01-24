@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const SearchBox = ({placeholder, handleChange}) => (
+const SearchBox = ({ placeholder, handleChange }) => (
   <Input
-    type="search"
+    type='search'
     placeholder={placeholder}
     onChange={handleChange}
   />
-);
+)
 
 export default SearchBox
 
