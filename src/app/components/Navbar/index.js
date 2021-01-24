@@ -27,33 +27,40 @@ const LogoAndText = styled.div`
 const Menus = styled.div`
     margin-left: 0.5rem;
 `;
+const WebName = styled.h1`
+    font-size: 0.5em;
+`;
+
+const NavLink = styled.button`
+  
+`;
 
 export const NavBar = () => (
-    <Wrapper>
-        <Navbar>
-            <ItemsWrapper>
-                <Link to="/">
-                    <LogoAndText>
-                        <img width="50px" src="/logo2.png" alt="Our Logo" />
-                        <h1 className="hover:text-green-500 hidden md:block">
-                            Opensource.place
-                        </h1>
-                    </LogoAndText>
-                </Link>
-                <Menus id="mobileMenu">
-                    <Link to="/projects" className="ml-3">
-                        Projects
+  <Wrapper>
+    <Navbar>
+      <ItemsWrapper>
+        <Link to="/">
+          <LogoAndText>
+            <img width="50px" src="/logo2.png" alt="Our Logo" />
+            <WebName>
+              Opensource.place
+                        </WebName>
+          </LogoAndText>
+        </Link>
+        <Menus id="mobileMenu">
+          <NavLink as="Link" to="/projects">
+            Projects
+                    </NavLink>
+          <Link to="/doc">
+            Documents
                     </Link>
-                    <Link to="/doc" className="ml-3">
-                        Documents
+          <Link to="/login">
+            Login
                     </Link>
-                    <Link to="/login" className="ml-3 primary-button">
-                        Login
-                    </Link>
-                </Menus>
-            </ItemsWrapper>
-        </Navbar>
-    </Wrapper>
+        </Menus>
+      </ItemsWrapper>
+    </Navbar>
+  </Wrapper>
 );
 
 export default NavBar;

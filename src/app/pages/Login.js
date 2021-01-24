@@ -10,7 +10,7 @@ const Login = () => {
   });
 
   return (
-    <div className="min-h-screen flex flex-col items-center dark:bg-gray-800 bg-gray-200">
+    <div>
       <h1>Redirecting to GitHub</h1>
     </div>
   );

@@ -39,7 +39,7 @@ const ProjectList = () => {
   };
 
   return (
-    <div className="w-full">
+    <div>
       <SearchBox
         placeholder="Search Projects..."
         handleChange={(e) => handleChange(e)}

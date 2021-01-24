@@ -20,7 +20,7 @@ import axios from "axios";
 
   return issues.map((issue, index) => (
     <li key={index}>
-      <a href={issue.html_url} className="flex-row" starget="_blank">
+      <a href={issue.html_url} starget="_blank">
         {issue.title}
       </a>
     </li>

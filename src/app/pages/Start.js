@@ -21,16 +21,16 @@ const Start = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center dark:bg-gray-800 bg-gray-200">
+    <div>
       <NavBar />
       {getDBStatus ? (
-        <div className="alert alert-primary my-3 " role="alert">
+        <div role="alert">
           {getDBStatusMSG}
         </div>
       ) : null}
-      <div className="container">
-        <div className="row mt-3">
-          <div className="d-flex justify-content-center align-items-center flex-row">
+      <div>
+        <div>
+          <div>
             <input
               type="text"
               className="form-control"
@@ -41,7 +41,6 @@ const Start = () => {
             <button
               onClick={addIssue}
               type="Submit"
-              className="w-25 form-control btn btn-primary"
             >
               Add Project
             </button>
