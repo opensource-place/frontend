@@ -1,17 +1,7 @@
 import React from 'react'
-import { Container, Link } from './style'
+import { Container, Link, Img, Text } from './style'
 import Logo from '../../assets/logo.png'
-import styled from 'styled-components'
 
-const Img = styled.img`
-  width: 10em;
-  height: 10em;
-`
-const Text = styled.p`
-  font-size: 1rem;
-  font-weight: 300;
-  color: rgb(33, 64, 58);
-`
 const year = new Date().getFullYear()
 
 const Footer = () => (

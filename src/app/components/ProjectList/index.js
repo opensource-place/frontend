@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import ProjectCard from '../ProjectCard'
-import SearchBox from '../SearchBox'
+import { SearchBox, ProjectCard } from '../../components'
 import axios from 'axios'
 
 const ProjectList = () => {
