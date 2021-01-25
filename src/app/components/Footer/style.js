@@ -19,15 +19,10 @@ const Container = styled.div`
   border-radius: 15px;
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), rgba(178, 255, 241, 0.3);
 `
-const Img = styled.img`
-  width: 10em;
-  height: 10em;
+
+const Logo = styled.img`
 `
-const Text = styled.p`
-  font-size: 1rem;
-  font-weight: 300;
-  color: rgb(33, 64, 58);
-`
+
 const Wrapper = styled.div`
   display: flex;
   align-items: flex-end;
@@ -53,4 +48,4 @@ const Menus = styled.div`
   display: flex;
 `
 
-export { Container, Img, Wrapper, Link, Menus, Text }
+export { Container, Logo, Wrapper, Link, Menus }
