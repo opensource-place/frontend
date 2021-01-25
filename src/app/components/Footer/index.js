@@ -12,6 +12,8 @@ const Text = styled.p`
   font-weight: 300;
   color: rgb(33, 64, 58);
 `
+const year = new Date().getFullYear()
+
 const Footer = () => (
   <Container>
     <div>
@@ -19,7 +21,7 @@ const Footer = () => (
       <Link as="a">Contacts</Link>
     </div>
     <Img src={Logo} width="10" height="10em" />
-    <Text>© Copyright 2021 - Open Source Adam</Text>
+    <Text>© Copyright {year} - Open Source Place</Text>
   </Container>
 )
 
