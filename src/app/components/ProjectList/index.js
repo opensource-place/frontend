@@ -20,17 +20,18 @@ const ProjectList = () => {
     }`
 
     const res = await axios.get(`/graphql?query=${query}`)
+    // const res = await axios.get(`http://localhost:8080/graphql?query=${query}`)
     setRepositories(res.data.data.repositories)
   }
 
   return (
-    <div className='w-full'>
-      <SearchBox
-        placeholder='Search Projects...'
-      />
-      <div className='flex'>
+    <div>
+      <SearchBox placeholder="Search Projects..." />
+      <div>
         {repositories.map((data, index) => (
-          <ProjectCard key={index} repository={data} />
+          <div key={index}>
+            <ProjectCard repository={data.pathname} />
+          </div>
         ))}
       </div>
     </div>
