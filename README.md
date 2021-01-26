@@ -69,3 +69,9 @@ for building the project into static, deployable files.
   "editor.formatOnSave": true
 }
 ```
+## for disable eslint while coding
+```
+/* eslint-disable */
+``
+
+

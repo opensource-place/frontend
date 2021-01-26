@@ -1,11 +1,12 @@
 import React from 'react'
-import { Container, Text, topDiv } from './style'
+import { Container, Text, TopDiv } from './style'
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar'
 
-const ProjectCard = () => {
+const ProjectCard = ({ repository }) => {
+  console.log(repository)
   return (
     <Container>
-      <topDiv>
+      <TopDiv>
         <div style={{ width: 112.98, height: 112.98 }}>
           <CircularProgressbarWithChildren value={66}>
             <div
@@ -20,9 +21,9 @@ const ProjectCard = () => {
               issues
             </div>
           </CircularProgressbarWithChildren>
+          <Text>{repository}</Text>
         </div>
-        <Text>open source place</Text>
-      </topDiv>
+      </TopDiv>
     </Container>
   )
 }

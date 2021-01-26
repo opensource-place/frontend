@@ -31,14 +31,13 @@ const Text = styled.h1`
   font-size: 1rem;
   color: #000;
 `
-const topDiv = styled.div`
+const TopDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100px;
   width: 100px;
-  background-color: red;
 `
 
-export { Container, Text, topDiv }
+export { Container, Text, TopDiv }
