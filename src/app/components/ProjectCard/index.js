@@ -1,11 +1,18 @@
 import React from 'react'
+import { Container, Text } from './style'
+import { CircularProgressbar } from 'react-circular-progressbar'
 
-const ProjectCard = ({ repository }) => {
+const ProjectCard = () => {
+  const value = 0.66
   return (
-    <div className='p-3 bg-green-300 w-1/4 dark:bg-gray-900 bg-gray-100 m-2'>
-      <div>Repository pathname: {repository.pathname}</div>
-      <div>Issue count: {repository.issues.length}</div>
-    </div>
+    <Container>
+      <Text>Hello Open Source!</Text>
+      <CircularProgressbar
+        value={value}
+        maxValue={1}
+        text={`${value * 100}%`}
+      />
+    </Container>
   )
 }
 
