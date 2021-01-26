@@ -34,7 +34,7 @@ export const NavBar = () => (
       <ItemsWrapper>
         <Link to='/'>
           <LogoAndText>
-            <img width='50px' src='/logo2.png' alt='Our Logo' />
+            <img width='100px' src='/logo.png' alt='Our Logo' />
             <h1 className='hover:text-green-500 hidden md:block'>
               Opensource.place
             </h1>

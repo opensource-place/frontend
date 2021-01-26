@@ -57,3 +57,15 @@ for building the project into static, deployable files.
 > and `yarn run lint:fix` to fix them.
 > Don't worry if you forgot to lint your code!
 > Someone will definitely fix it in another commit for you :smiley:
+
+
+## .vscode settings.json
+```
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["js"],
+  "editor.formatOnSave": true
+}
+```

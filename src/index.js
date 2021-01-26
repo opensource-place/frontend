@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import './reset.css'
 import reportWebVitals from './reportWebVitals'
 import Router from './app/Router'
+import 'react-circular-progressbar/dist/styles.css'
 
 ReactDOM.render(
   <React.StrictMode>
