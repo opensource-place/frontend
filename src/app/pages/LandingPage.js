@@ -1,27 +1,47 @@
 import React from 'react'
 import { Footer, NavBar } from '../components'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+
+const HeaderUp = styled.div`
+    margin: 10%;
+    padding: 2em;
+    background-color: #1FB79B;
+    border-radius: 1em;
+    text-align: center;
+`
+
+const Invite = styled.div`
+    margin-top 1em;
+`
+const PrimaryButton = styled.div`
+    padding: .2em;
+    baclground-color:
+`
 
 const LandingPage = () => {
   return (
-    <div className='min-h-screen flex flex-col items-center dark:bg-gray-800 bg-gray-200'>
+    <div>
       <NavBar />
-      <div className='flex flex-col items-center justify-center p-4 m-8 border-2 border-light-blue-500 border-opacity-100'>
-        <h2 className='text-center pt-1 mt-4 '>
+      <HeaderUp>
+        <h2>
           The platform includes open source projects. You can list all published
           open-source projects and also add your project on Github to the
           platform and your projects make open source!
         </h2>
-        <a
-          href='https://github.com/FurkanPortakal/opensourceadam'
-          className='text-center mt-2 mb-6 underline'
-        >
-          Feel free to contribute!
-        </a>
+        <Invite>
+          <a
+            href='https://github.com/FurkanPortakal/opensourceadam'
+          >
+            Feel free to contribute!
+          </a>
         <Link to='/start'>
-          <button className='uppercase primary-button'>Start</button>
+          <PrimaryButton>
+            <button>Start</button>
+          </PrimaryButton>
         </Link>
-      </div>
+        </Invite>
+      </HeaderUp>
       <Footer />
     </div>
   )
