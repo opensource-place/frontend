@@ -1,23 +1,27 @@
-import React from 'react'
-import { Footer, NavBar } from '../components'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+/* eslint-disable */
+import React from "react";
+import { Footer, NavBar, StyledButton, ProjectCard } from "../components";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const HeaderUp = styled.div`
-    margin: 10%;
-    padding: 2em;
-    background-color: #1FB79B;
-    border-radius: 1em;
-    text-align: center;
-`
+  margin: 10%;
+  padding: 2em;
+  background-color: #1fb79b;
+  border-radius: 1em;
+  text-align: center;
+`;
 
 const Invite = styled.div`
     margin-top 1em;
-`
-const PrimaryButton = styled.div`
-    padding: .2em;
-    baclground-color:
-`
+`;
+
+const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+`;
 
 const LandingPage = () => {
   return (
@@ -30,21 +34,24 @@ const LandingPage = () => {
           platform and your projects make open source!
         </h2>
         <Invite>
-          <a
-            href='https://github.com/FurkanPortakal/opensourceadam'
-          >
+          <a href="https://github.com/FurkanPortakal/opensourceadam">
             Feel free to contribute!
           </a>
-        <Link to='/start'>
-          <PrimaryButton>
-            <button>Start</button>
-          </PrimaryButton>
-        </Link>
+          <Center>
+            <Link to="/start">
+              <StyledButton easy height="10px">
+                Start
+              </StyledButton>
+            </Link>
+          </Center>
         </Invite>
       </HeaderUp>
+      <Center>
+        {/* <ProjectCard /> */}
+      </Center>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;

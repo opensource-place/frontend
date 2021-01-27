@@ -1,17 +1,17 @@
 import React from 'react'
-import { ProjectCard, ProjectList, NavBar } from '../components/'
+import { ProjectCard, ProjectList, NavBar, Footer } from '../components/'
 
 const Projects = () => {
   return (
     <div>
       <NavBar />
-      <div >
+      <div>
         <h1>Project List</h1>
         <ProjectList />
-        <div>
-        </div>
+        <div></div>
       </div>
-      <ProjectCard/>
+      <ProjectCard />
+      <Footer />
     </div>
   )
 }
