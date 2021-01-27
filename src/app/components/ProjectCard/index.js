@@ -3,7 +3,6 @@ import { Container, Text, TopDiv } from './style'
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar'
 
 const ProjectCard = ({ repository }) => {
-  console.log(repository)
   return (
     <Container>
       <TopDiv>
