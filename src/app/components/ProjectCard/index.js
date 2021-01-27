@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Container, Text, TopDiv } from './style'
+import { StyledButton } from '../index'
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar'
 
 const ProjectCard = ({ repository }) => {
+  const path = `/project${repository}`
   return (
     <Container>
       <TopDiv>
@@ -21,6 +24,9 @@ const ProjectCard = ({ repository }) => {
             </div>
           </CircularProgressbarWithChildren>
           <Text>{repository}</Text>
+          <StyledButton>
+           <Link to={path}>Details</Link>
+          </StyledButton>
         </div>
       </TopDiv>
     </Container>

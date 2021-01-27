@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Footer, NavBar } from '../components'
 import axios from 'axios'
 
 function ProjectDetail () {
@@ -21,27 +22,32 @@ function ProjectDetail () {
       }
     }`
 
-    const res = await axios.get(`/graphql?query=${query}`)
+    const res = await axios.get(`http://localhost:8080/graphql?query=${query}`)
+    // const res = await axios.get(`/graphql?query=${query}`)
     setIssues(res.data.data.issues)
   }
 
   return (
-    <div>
-      Total issue: {issues.length}
-      {issues.map((item, i) => (
-        <div key={i}>
-          <a href={item.html_url}>
-            <h2>{item.title}</h2>
-          </a>
-          <img
-            height='50px'
-            width='50px'
-            src={item.user.avatar_url}
-            alt='The issue creator'
-          />
-        </div>
-      ))}
-    </div>
+    <>
+      <NavBar />
+      <div>
+        Total issue: {issues.length}
+        {issues.map((item, i) => (
+          <div key={i}>
+            <a href={item.html_url}>
+              <h2>{item.title}</h2>
+            </a>
+            <img
+              height="50px"
+              width="50px"
+              src={item.user.avatar_url}
+              alt="The issue creator"
+            />
+          </div>
+        ))}
+      </div>
+      <Footer />
+    </>
   )
 }
 

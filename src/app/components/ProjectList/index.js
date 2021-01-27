@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import { SearchBox, ProjectCard } from '../../components'
-import axios from 'axios'
+/* eslint-disable */
+import React, { useState, useEffect } from "react";
+import { SearchBox, ProjectCard } from "../../components";
+import axios from "axios";
 
 const ProjectList = () => {
-  const [repositories, setRepositories] = useState([])
+  const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
-    dataFetch()
-  }, [])
+    dataFetch();
+  }, []);
 
   const dataFetch = async () => {
     const query = `{
@@ -17,12 +18,12 @@ const ProjectList = () => {
           title
         }
       }
-    }`
+    }`;
 
-    const res = await axios.get(`/graphql?query=${query}`)
-    // const res = await axios.get(`http://localhost:8080/graphql?query=${query}`)
-    setRepositories(res.data.data.repositories)
-  }
+    // const res = await axios.get(`/graphql?query=${query}`)
+    const res = await axios.get(`http://localhost:8080/graphql?query=${query}`);
+    setRepositories(res.data.data.repositories);
+  };
 
   return (
     <div>
@@ -35,7 +36,7 @@ const ProjectList = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectList
+export default ProjectList;
