@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: rgba(0,0,0, .05);
 `
 const Navbar = styled.nav`
     display: flex;
@@ -25,7 +25,16 @@ const LogoAndText = styled.div`
     align-items: center;
 `
 const Menus = styled.div`
-    margin-left: 0.5rem;
+    margin-left: 5px;
+    display: flex;
+
+`
+const NavItem = styled.div`
+    margin-left: 10px;
+`
+const NavTitle = styled.div`
+    margin-left: 10px;
+    font-size: 24px;
 `
 
 export const NavBar = () => (
@@ -34,22 +43,28 @@ export const NavBar = () => (
       <ItemsWrapper>
         <Link to='/'>
           <LogoAndText>
-            <img width='100px' src='/logo.png' alt='Our Logo' />
-            <h1 className='hover:text-green-500 hidden md:block'>
+            <img width='60x' src='/logo.png' alt='Our Logo' />
+            <NavTitle>
               Opensource.place
-            </h1>
+            </NavTitle>
           </LogoAndText>
         </Link>
         <Menus id='mobileMenu'>
-          <Link to='/projects' className='ml-3'>
-            Projects
-          </Link>
-          <Link to='/doc' className='ml-3'>
-            Documents
-          </Link>
-          <Link to='/login' className='ml-3 primary-button'>
-            Login
-          </Link>
+          <NavItem>
+            <Link to='/projects'>
+              Projects
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link to='/doc'>
+              Documents
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link to='/login'>
+              Login
+            </Link>
+          </NavItem>
         </Menus>
       </ItemsWrapper>
     </Navbar>
