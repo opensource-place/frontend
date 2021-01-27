@@ -25,7 +25,7 @@ const ProjectCard = ({ repository }) => {
           </CircularProgressbarWithChildren>
           <Text>{repository}</Text>
           <StyledButton>
-           <Link to={path}>Details</Link>
+            <Link to={path}>Details</Link>
           </StyledButton>
         </div>
       </TopDiv>
