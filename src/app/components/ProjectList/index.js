@@ -28,7 +28,7 @@ const ProjectList = () => {
   return (
     <div>
       <SearchBox placeholder="Search Projects..." />
-      <div>
+      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
         {repositories.map((data, index) => (
           <div key={index}>
             <ProjectCard repository={data.pathname} />

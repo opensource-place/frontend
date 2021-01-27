@@ -1,16 +1,20 @@
+/* eslint-disable */
 import React from 'react'
-import { ProjectCard, ProjectList, NavBar, Footer } from '../components/'
+import { ProjectList, NavBar, Footer } from '../components/'
 
 const Projects = () => {
   return (
+
     <div>
       <NavBar />
-      <div>
+      <div style={{ marginLeft: '50px', marginRight: '50px' }}>
         <h1>Project List</h1>
-        <ProjectList />
-        <div></div>
+        <div >
+          <ProjectList />
+        </div>
+
       </div>
-      <ProjectCard />
+
       <Footer />
     </div>
   )

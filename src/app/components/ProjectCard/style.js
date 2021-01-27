@@ -10,6 +10,8 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 1rem;
+    
   }
 
   @media screen and (min-width: 768px) {

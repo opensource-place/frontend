@@ -5,7 +5,7 @@ const ProjectDetail = () => {
   return (
     <>
       <NavBar />
-      <ProjectDetailsCard />
+        <ProjectDetailsCard />
       <Footer />
     </>
   )
