@@ -11,9 +11,10 @@ import {
 } from './style'
 
 const Navbar = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 12px;
+  width: 100%;
+  background-color: #242526;
+  box-shadow: 4px 4px 11px rgba(0, 0, 0, .15);
 `
 
 export const NavBar = () => (
@@ -22,8 +23,8 @@ export const NavBar = () => (
       <ItemsWrapper>
         <Link to="/">
           <LogoAndText>
-            <img width="60x" src="/logo.png" alt="Our Logo" />
-            <NavTitle>Opensource.place</NavTitle>
+            <img width="35px" src="/logo.png" alt="Our Logo" />
+            <NavTitle>OpenSource.place</NavTitle>
           </LogoAndText>
         </Link>
         <Menus id="mobileMenu">

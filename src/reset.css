@@ -1,6 +1,11 @@
-html, body, #app{
+html, body, #app {
   min-width: 100%;
   min-height: 100vh;
   font-family: 'Chakra Petch', sans-serif;
   outline: none;
+  background: #303132;
+}
+
+a {
+  text-decoration: none;
 }
