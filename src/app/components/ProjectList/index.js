@@ -1,42 +1,46 @@
-/* eslint-disable */
-import React, { useState, useEffect } from "react";
-import { SearchBox, ProjectCard } from "../../components";
-import axios from "axios";
+import React, { useEffect } from 'react'
+import { SearchBox, ProjectCard } from '../../components'
+import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
 
 const ProjectList = () => {
-  const [repositories, setRepositories] = useState([]);
+  const { projects } = useSelector((state) => state.projects)
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    dataFetch();
-  }, []);
+    dataFetch()
+  }, [])
 
   const dataFetch = async () => {
-    const query = `{
-      repositories {
-        pathname
-        issues {
-          title
+    try {
+      const query = `{
+        repositories {
+          pathname
+          issues {
+            title
+          }
         }
-      }
-    }`;
-
-    // const res = await axios.get(`/graphql?query=${query}`)
-    const res = await axios.get(`http://localhost:8080/graphql?query=${query}`);
-    setRepositories(res.data.data.repositories);
-  };
+      }`
+      dispatch({ type: 'FETCHING_PROJECTS' })
+      const res = await axios.get(`http://localhost:8080/graphql?query=${query}`)
+      dispatch({ type: 'FETCHED_PROJECTS', payload: res.data.data.repositories })
+    } catch (error) {
+      dispatch({ type: 'ERROR' })
+    }
+  }
 
   return (
     <div>
       <SearchBox placeholder="Search Projects..." />
-      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
-        {repositories.map((data, index) => (
+      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+        {projects.map((data, index) => (
           <div key={index}>
             <ProjectCard repository={data.pathname} />
           </div>
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectList;
+export default ProjectList
