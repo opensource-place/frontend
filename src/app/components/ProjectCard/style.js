@@ -9,9 +9,8 @@ const Container = styled.div`
     border-radius: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-right: 1rem;
-    
   }
 
   @media screen and (min-width: 768px) {
@@ -26,12 +25,12 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #4b7d74;
+  border: thick solid #4B7D74;
 `
 
 const Text = styled.h1`
   font-size: 1rem;
-  color: #000;
+  color: white;
 `
 const TopDiv = styled.div`
   display: flex;

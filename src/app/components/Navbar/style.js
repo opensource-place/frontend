@@ -1,18 +1,6 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-  @media screen and (min-width: 1024px) {
-    width: 100vw;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 100vw;
-  }
-
-  @media screen and (min-width: 320px) {
-    width: 100vw;
-  }
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +16,17 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.05);
+  @media screen and (min-width: 1024px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 320px) {
+    width: 100%;
+  }
 `
 const ItemsWrapper = styled.div`
   display: flex;
@@ -46,11 +45,12 @@ const Menus = styled.div`
 `
 const NavItem = styled.div`
   margin-left: 10px;
+  color: '#1FB79B'
 `
 const NavTitle = styled.div`
   margin-left: 10px;
   font-size: 18px;
-  color: #eee;
+  color: #1FB79B;
 `
 
 export {
