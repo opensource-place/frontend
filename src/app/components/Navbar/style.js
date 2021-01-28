@@ -12,6 +12,7 @@ const Container = styled.div`
   @media screen and (min-width: 320px) {
     width: 100vw;
   }
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,25 +31,26 @@ const Wrapper = styled.div`
 `
 const ItemsWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
-  width: 100vw;
+  justify-content: space-between;
+  width: 100%;
 `
 const LogoAndText = styled.div`
   display: flex;
   align-items: center;
 `
 const Menus = styled.div`
-  margin-left: 5px;
+  margin-right: 5px;
   display: flex;
+  margin-left: auto;
 `
 const NavItem = styled.div`
   margin-left: 10px;
 `
 const NavTitle = styled.div`
   margin-left: 10px;
-  font-size: 24px;
+  font-size: 18px;
+  color: #eee;
 `
 
 export {

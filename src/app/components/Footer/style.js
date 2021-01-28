@@ -2,23 +2,22 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   @media screen and (min-width: 1024px) {
-    width: 100vw;
-}
+    width: 100%;
+  }
 
-@media screen and (min-width: 768px) {
-  width: 100vw;
-}
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
 
-@media screen and (min-width: 320px) {
-  width: 100vw;
-}
+  @media screen and (min-width: 320px) {
+    width: 100%;
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 15px;
-  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), rgba(178, 255, 241, 0.3);
-  bottom: 0;
+  background: #303132;
   margin-top: auto;
 `
 const Wrapper = styled.div`
@@ -52,7 +51,7 @@ const Img = styled.img`
 const Text = styled.p`
   font-size: 1rem;
   font-weight: 300;
-  color: rgb(33, 64, 58);
+  color: #eee;
 `
 
 export { Container, Img, Wrapper, Link, Menus, Text }
