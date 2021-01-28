@@ -9,7 +9,7 @@ const ProjectCard = ({ repository }) => {
   return (
     <Container>
       <TopDiv>
-        <div style={{ width: 112.98, height: 112.98 }}>
+        <div style={{ width: 112.98, height: 112.98, marginTop: 30 }}>
           <CircularProgressbarWithChildren value={66}>
             <div
               style={{

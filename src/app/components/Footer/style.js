@@ -17,9 +17,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #303132;
+  //background: #303132;
   margin-top: auto;
-`
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(139, 255, 234, 0.2) 100%);
+  `
 const Wrapper = styled.div`
   display: flex;
   align-items: flex-end;
