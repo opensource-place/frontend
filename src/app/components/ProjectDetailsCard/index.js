@@ -21,7 +21,7 @@ function ProjectDetail () {
       }
     }`
 
-    const res = await axios.get(`/graphql?query=${query}`)
+    const res = await axios.get(`http://localhost:8080/graphql?query=${query}`)
     setIssues(res.data.data.issues)
   }
 
