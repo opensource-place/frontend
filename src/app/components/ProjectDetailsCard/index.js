@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import axios from 'axios'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
-function ProjectDetail () {
-  const { projectname, reponame } = useParams()
-  const [issues, setIssues] = useState([])
+function ProjectDetail() {
+  const { projectname, reponame } = useParams();
+  const [issues, setIssues] = useState([]);
 
   useEffect(() => {
-    projectFetch()
-  }, [])
+    projectFetch();
+  }, []);
 
   const projectFetch = async () => {
     const query = `{
@@ -19,11 +19,11 @@ function ProjectDetail () {
             avatar_url
         }
       }
-    }`
+    }`;
 
-    const res = await axios.get(`/graphql?query=${query}`)
-    setIssues(res.data.data.issues)
-  }
+    const res = await axios.get(`http://localhost:8080/graphql?query=${query}`);
+    setIssues(res.data.data.issues);
+  };
 
   return (
     <div>
@@ -42,7 +42,7 @@ function ProjectDetail () {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default ProjectDetail
+export default ProjectDetail;
