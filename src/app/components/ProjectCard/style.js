@@ -2,30 +2,28 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   @media screen and (min-width: 1024px) {
-    height: 200px;
-    width: 277px;
-    left: 747px;
-    top: 312px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-right: 1rem;
+    height: 28rem;
+    width: 18rem;
   }
 
   @media screen and (min-width: 768px) {
-    height: 452px;
-    width: 277px;
+    height: 28rem;
+    width: 18rem;
   }
 
   @media screen and (min-width: 320px) {
-    height: 452px;
-    width: 277px;
+    height: 29rem;
+    width: 18rem;
+    top: 1rem;
   }
   display: flex;
   justify-content: center;
-  align-items: center;
   border: thick solid #4B7D74;
+  left: 747px;
+  top: 312px;
+  border-radius: 30px;
+  align-items: flex-start;
+  margin-right: 1rem;
 `
 
 const Text = styled.h1`
