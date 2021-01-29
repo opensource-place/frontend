@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   @media screen and (min-width: 1024px) {
-    height: 452px;
+    height: 200px;
     width: 277px;
     left: 747px;
     top: 312px;
