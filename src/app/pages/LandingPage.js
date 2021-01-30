@@ -1,10 +1,9 @@
-/* eslint-disable */
-import React, { useEffect } from "react";
-import { Footer, NavBar, StyledButton, ProjectCard } from "../components";
-import { Link } from "react-router-dom";
-import Example from "../assets/example.svg";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from 'react'
+import { Footer, NavBar, StyledButton, ProjectCard } from '../components'
+import { Link } from 'react-router-dom'
+import Example from '../assets/example.svg'
+import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
 import {
   HeaderUp,
   DarkenBackground,
@@ -12,17 +11,17 @@ import {
   Invite,
   Center,
   Description,
-  Container,
-} from "./style";
-import CONSTANTS from "../redux/actions";
+  Container
+} from './style'
+import CONSTANTS from '../redux/actions'
 
 const LandingPage = () => {
-  const { projects } = useSelector((state) => state.projects);
-  const dispatch = useDispatch();
+  const { projects } = useSelector((state) => state.projects)
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    dataFetch();
-  }, []);
+    dataFetch()
+  }, [])
 
   const dataFetch = async () => {
     try {
@@ -33,26 +32,26 @@ const LandingPage = () => {
             title
           }
         }
-      }`;
-      dispatch({ type: CONSTANTS.FETHING_PROJECTS });
+      }`
+      dispatch({ type: CONSTANTS.FETHING_PROJECTS })
       const res = await axios.get(
         `http://localhost:8080/graphql?query=${query}`
-      );
+      )
       dispatch({
         type: CONSTANTS.FETCHED_PROJECTS,
-        payload: res.data.data.repositories,
-      });
+        payload: res.data.data.repositories
+      })
     } catch (error) {
-      dispatch({ type: CONSTANTS.ERROR });
+      dispatch({ type: CONSTANTS.ERROR })
     }
-  };
+  }
   return (
     <Container>
       <NavBar />
       <HeaderUp>
         <DarkenBackground>
           <AddSomeMargin>
-            <h2 style={{ color: "#444", fontWeight: "bold" }}>
+            <h2 style={{ color: '#444', fontWeight: 'bold' }}>
               The platform includes open source projects. You can list all
               published open-source projects and also add your project on Github
               to the platform and your projects make open source!
@@ -88,14 +87,14 @@ const LandingPage = () => {
       <div style={{ marginRight: 480, marginLeft: 480 }}>
         <div
           style={{
-            display: "flex",
-            alignItems: "flex-start",
-            justifyContent: "flex-start",
+            display: 'flex',
+            alignItems: 'flex-start',
+            justifyContent: 'flex-start'
           }}
         >
           <Description>
             <img width="200" height="200" src={Example} />
-            <p style={{ color: "white" }}>
+            <p style={{ color: 'white' }}>
               Irure ad ipsum fugiat nisi ullamco ipsum ullamco anim non fugiat.
               Consectetur eu veniam sint esse commodo exercitation esse. Ex elit
               aliqua aliquip consequat eiusmod fugiat veniam labore id. Dolore
@@ -106,13 +105,13 @@ const LandingPage = () => {
         </div>
         <div
           style={{
-            display: "flex",
-            alignItems: "flex-start",
-            justifyContent: "flex-end",
+            display: 'flex',
+            alignItems: 'flex-start',
+            justifyContent: 'flex-end'
           }}
         >
           <Description>
-            <p style={{ color: "white" }}>
+            <p style={{ color: 'white' }}>
               Irure ad ipsum fugiat nisi ullamco ipsum ullamco anim non fugiat.
               Consectetur eu veniam sint esse commodo exercitation esse. Ex elit
               aliqua aliquip consequat eiusmod fugiat veniam labore id. Dolore
@@ -126,7 +125,7 @@ const LandingPage = () => {
 
       <Footer />
     </Container>
-  );
-};
+  )
+}
 
-export default LandingPage;
+export default LandingPage
