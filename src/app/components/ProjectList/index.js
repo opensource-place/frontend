@@ -12,7 +12,7 @@ const ProjectList = () => {
       <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
         {projects.map((data, index) => (
           <div key={index}>
-            <ProjectCard repository={data} />
+            <ProjectCard repository={data.pathname} />
           </div>
         ))}
       </div>
