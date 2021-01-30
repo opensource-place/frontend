@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Container, Issues, Details } from './style'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
@@ -26,22 +27,29 @@ function ProjectDetail () {
   }
 
   return (
-    <div>
-      Total issue: {issues.length}
-      {issues.map((item, i) => (
-        <div key={i}>
-          <a href={item.html_url}>
-            <h2>{item.title}</h2>
-          </a>
-          <img
-            height="50px"
-            width="50px"
-            src={item.user.avatar_url}
-            alt="The issue creator"
-          />
-        </div>
-      ))}
-    </div>
+    <Container>
+      <Details>
+        <h1>
+          {projectname} - {reponame}
+        </h1>
+        <h2>Total issue: {issues.length}</h2>
+      </Details>
+      <Issues>
+        {issues.map((item, i) => (
+          <div key={i}>
+            <a href={item.html_url}>
+              <h2>{item.title}</h2>
+            </a>
+            <img
+              height="50px"
+              width="50px"
+              src={item.user.avatar_url}
+              alt="The issue creator"
+            />
+          </div>
+        ))}
+      </Issues>
+    </Container>
   )
 }
 

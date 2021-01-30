@@ -1,15 +1,13 @@
-/* eslint-disable */
-import React from "react";
-import { Link } from "react-router-dom";
-import { Container, Text, TopDiv } from "./style";
-import { StyledButton, ChartLang } from "../index";
-import { CircularProgressbarWithChildren } from "react-circular-progressbar";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Container, Text, TopDiv } from './style'
+import { StyledButton, ChartLang } from '../index'
+import { CircularProgressbarWithChildren } from 'react-circular-progressbar'
 
 const ProjectCard = ({ repository }) => {
-  const path = `/project${repository.pathname}`;
-  const pathx = path.split("/");
-  const len = repository.issues;
-  console.log(len.length);
+  const path = `/project${repository.pathname}`
+  const pathx = path.split('/')
+  const len = repository.issues
   return (
     <Container>
       <TopDiv>
@@ -18,7 +16,7 @@ const ProjectCard = ({ repository }) => {
             width: 112.98,
             height: 112.98,
             marginTop: 30,
-            color: "white",
+            color: 'white'
           }}
         >
           <CircularProgressbarWithChildren value={66}>
@@ -26,8 +24,8 @@ const ProjectCard = ({ repository }) => {
               style={{
                 fontSize: 12,
                 marginTop: -5,
-                display: "flex",
-                justifyContent: "center",
+                display: 'flex',
+                justifyContent: 'center'
               }}
             >
               <strong>{len.length}</strong> <br />
@@ -38,14 +36,14 @@ const ProjectCard = ({ repository }) => {
             {pathx[2]}📌{pathx[3]}
           </Text>
 
-          <StyledButton>
-            <Link to={path}>Details</Link>
-          </StyledButton>
+          <Link to={path}>
+            <StyledButton>Details</StyledButton>
+          </Link>
         </div>
       </TopDiv>
       <ChartLang />
     </Container>
-  );
-};
+  )
+}
 
-export default ProjectCard;
+export default ProjectCard

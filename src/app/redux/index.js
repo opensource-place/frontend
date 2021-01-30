@@ -1,7 +1,6 @@
-/*eslint-disable*/
-import { combineReducers } from "redux";
-import projectsReducers from "./reducers/projectsReducers";
+import { combineReducers } from 'redux'
+import projectsReducers from './reducers/projectsReducers'
 
 export default combineReducers({
-  projects: projectsReducers,
-});
+  projects: projectsReducers
+})

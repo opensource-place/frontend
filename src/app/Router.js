@@ -1,20 +1,19 @@
-/*eslint-disable*/
-import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import axios from "axios";
+import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
+import axios from 'axios'
 import {
   Projects,
   LandingPage,
   Start,
   Doc,
   Login,
-  ProjectDetail,
-} from "./pages";
-import { Provider } from "react-redux";
-import storex from "./redux/store";
+  ProjectDetail
+} from './pages'
+import { Provider } from 'react-redux'
+import storex from './redux/store'
 
 const Router = () => {
-  axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+  axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
   return (
     <Provider store={storex}>
@@ -30,7 +29,7 @@ const Router = () => {
         />
       </BrowserRouter>
     </Provider>
-  );
-};
+  )
+}
 
-export default Router;
+export default Router
