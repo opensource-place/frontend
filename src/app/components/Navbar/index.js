@@ -14,7 +14,7 @@ const Navbar = styled.nav`
   padding: 12px;
   width: 100%;
   background-color: #242526;
-  box-shadow: 4px 4px 11px rgba(0, 0, 0, .15);
+  box-shadow: 4px 4px 11px rgba(0, 0, 0, 0.15);
 `
 
 export const NavBar = () => (
@@ -29,10 +29,17 @@ export const NavBar = () => (
         </Link>
         <Menus id="mobileMenu">
           <NavItem>
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects" style={{ color: '#1FB79B' }}>
+              Projects
+            </Link>
           </NavItem>
           <NavItem>
-            <a href="https://docs.opensource.place/">Documents</a>
+            <a
+              href="https://docs.opensource.place/"
+              style={{ color: '#1FB79B' }}
+            >
+              Documents
+            </a>
           </NavItem>
         </Menus>
       </ItemsWrapper>
