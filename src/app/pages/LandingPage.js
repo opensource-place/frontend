@@ -81,7 +81,7 @@ const LandingPage = () => {
       <Center>
         {projects.map((data, index) => (
           <div key={index}>
-            <ProjectCard repository={data.pathname} />
+            <ProjectCard repository={data} />
           </div>
         ))}
       </Center>

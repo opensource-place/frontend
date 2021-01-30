@@ -22,6 +22,12 @@ const projectReducer = (state = initialState, action) => {
         isLoaded: true,
         projects: action.payload,
       };
+    case CONSTANTS.ERROR:
+      return {
+        ...state,
+        isLoading: false,
+        hasError: true,
+      };
 
     default:
       return state;
