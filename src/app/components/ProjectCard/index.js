@@ -6,10 +6,10 @@ import { StyledButton, ChartLang } from "../index";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 
 const ProjectCard = ({ repository }) => {
-  const path = `/project${repository}`;
-  // const pathx = path.split("/");
-  // const len = repository.issues;
-  // console.log(len.length);
+  const path = `/project${repository.pathname}`;
+  const pathx = path.split("/");
+  const len = repository.issues;
+  console.log(len.length);
   return (
     <Container>
       <TopDiv>
@@ -30,13 +30,12 @@ const ProjectCard = ({ repository }) => {
                 justifyContent: "center",
               }}
             >
-              {/* <strong>{len.length}</strong> <br /> */}
+              <strong>{len.length}</strong> <br />
               issues
             </div>
           </CircularProgressbarWithChildren>
           <Text>
-            {repository}
-            {/* {pathx[2]}📌{pathx[3]} */}
+            {pathx[2]}📌{pathx[3]}
           </Text>
 
           <StyledButton>
