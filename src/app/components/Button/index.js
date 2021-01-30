@@ -27,8 +27,8 @@ const StyledButton = styled.button`
       : props.easy
       ? '#008622'
       : props.primary
-      ? 'linear-gradient(to bottom right, #20B59A, #20A78E)'
+      ? '#1FB79B'
       : '#00000'};
-  padding: ${props => props.padding || '1rem'};
+  padding: ${(props) => props.padding || '1rem'};
 `
 export default StyledButton

@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+/* eslint-disable */
+import styled from "styled-components";
 
 const Container = styled.div`
   @media screen and (min-width: 1024px) {
@@ -18,18 +19,19 @@ const Container = styled.div`
   }
   display: flex;
   justify-content: center;
-  border: thick solid #4B7D74;
+  border: thick solid #4b7d74;
   left: 747px;
   top: 312px;
   border-radius: 30px;
   align-items: flex-start;
   margin-right: 1rem;
-`
+  background: #242526;
+`;
 
 const Text = styled.h1`
   font-size: 1rem;
   color: white;
-`
+`;
 const TopDiv = styled.div`
   display: flex;
   justify-content: center;
@@ -37,6 +39,6 @@ const TopDiv = styled.div`
   flex-direction: column;
   height: 100px;
   width: 100px;
-`
+`;
 
-export { Container, Text, TopDiv }
+export { Container, Text, TopDiv };

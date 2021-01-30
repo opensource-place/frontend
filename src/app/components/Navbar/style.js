@@ -45,12 +45,12 @@ const Menus = styled.div`
 `
 const NavItem = styled.div`
   margin-left: 10px;
-  color: '#1FB79B'
+  color: "#1FB79B" !important;
 `
 const NavTitle = styled.div`
   margin-left: 10px;
   font-size: 18px;
-  color: #1FB79B;
+  color: #1fb79b;
 `
 
 export {
