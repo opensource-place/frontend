@@ -1,8 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit'
-import projectsReducers from './reducers/projectsReducers'
+/*eslint-disable*/
+import { combineReducers } from "redux";
+import projectsReducers from "./reducers/projectsReducers";
 
-export default configureStore({
-  reducer: {
-    projects: projectsReducers
-  }
-})
+export default combineReducers({
+  projects: projectsReducers,
+});

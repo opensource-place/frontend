@@ -1,0 +1,7 @@
+/* eslint-disable */
+const CONSTANTS = {
+  FETHING_PROJECTS: "FETHING_PROJECTS",
+  FETCHED_PROJECTS: "FETCHED_PROJECTS",
+  ERROR: "ERROR",
+};
+export default CONSTANTS;
