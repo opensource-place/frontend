@@ -1,15 +1,11 @@
-/* eslint-disable */
-import React from "react";
-import { Link } from "react-router-dom";
-import { Container, Text, TopDiv } from "./style";
-import { StyledButton, Progressbar } from "../index";
-import { CircularProgressbarWithChildren } from "react-circular-progressbar";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Container, Text, TopDiv } from './style'
+import { StyledButton, Progressbar } from '../index'
 
 const ProjectCard = ({ repository }) => {
-  const path = `/project${repository.pathname}`;
-  const pathx = path.split("/");
-  const len = repository.issues;
-  const progress = len.length * 3.3;
+  const path = `/project${repository.pathname}`
+  const pathx = path.split('/')
   return (
     <Container>
       <Progressbar repository={repository} />
@@ -22,7 +18,7 @@ const ProjectCard = ({ repository }) => {
         </Link>
       </TopDiv>
     </Container>
-  );
-};
+  )
+}
 
-export default ProjectCard;
+export default ProjectCard

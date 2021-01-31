@@ -1,26 +1,25 @@
-/* eslint-disable */
-import React, { useEffect, useState } from "react";
-import { Container, Issues, Details } from "./style";
-import { useParams } from "react-router-dom";
-import axios from "axios";
+import React, { useEffect, useState } from 'react'
+import { Container, Issues, Details } from './style'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
-function ProjectDetail() {
-  const { projectname, reponame } = useParams();
-  const [issues, setIssues] = useState([]);
+function ProjectDetail () {
+  const { projectname, reponame } = useParams()
+  const [issues, setIssues] = useState([])
 
   const findDate = (datex) => {
     // const datex = "2021-01-20T17:08:40Z";
-    const porti = datex.slice(0, 10).split("-");
-    let a = porti[0];
-    porti[0] = porti[2];
-    porti[2] = a;
-    let b = porti.join().replaceAll(",", "-");
-    return b;
-  };
+    const porti = datex.slice(0, 10).split('-')
+    const a = porti[0]
+    porti[0] = porti[2]
+    porti[2] = a
+    const b = porti.join().replaceAll(',', '-')
+    return b
+  }
 
   useEffect(() => {
-    projectFetch();
-  }, []);
+    projectFetch()
+  }, [])
 
   const projectFetch = async () => {
     const query = `{
@@ -32,11 +31,11 @@ function ProjectDetail() {
             avatar_url
         }
       }
-    }`;
+    }`
 
-    const res = await axios.get(`http://localhost:8080/graphql?query=${query}`);
-    setIssues(res.data.data.issues);
-  };
+    const res = await axios.get(`http://localhost:8080/graphql?query=${query}`)
+    setIssues(res.data.data.issues)
+  }
 
   return (
     <Container>
@@ -63,7 +62,7 @@ function ProjectDetail() {
         ))}
       </Issues>
     </Container>
-  );
+  )
 }
 
-export default ProjectDetail;
+export default ProjectDetail
