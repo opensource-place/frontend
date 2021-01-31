@@ -2,9 +2,8 @@ import React from 'react'
 import { Container, TopDiv } from './style'
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar'
 
-const Progressbar = ({ repository }) => {
-  const len = repository.issues
-  const progress = len.length * 3.3
+const Progressbar = ({ issues }) => {
+  const progress = issues.length * 3.3
   return (
     <Container>
       <TopDiv>
@@ -25,7 +24,7 @@ const Progressbar = ({ repository }) => {
                 justifyContent: 'center'
               }}
             >
-              <strong>{len.length}</strong> <br />
+              <strong>{issues.length}</strong> <br />
               issues
             </div>
           </CircularProgressbarWithChildren>

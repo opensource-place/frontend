@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { SearchBox, ProjectCard } from '../../components'
+import { ProjectCard } from '../../components'
 import { useSelector, useDispatch } from 'react-redux'
 import CONSTANTS from '../../redux/actions'
 import axios from 'axios'
@@ -37,7 +37,6 @@ const ProjectList = () => {
   }
   return (
     <div>
-      <SearchBox placeholder="Search Projects..." />
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         {projects.map((data, index) => (
           <div key={index}>
