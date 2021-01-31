@@ -17,13 +17,12 @@ const Container = styled.div`
     top: 1rem;
   }
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border: thick solid #4b7d74;
-  left: 747px;
-  top: 312px;
   border-radius: 30px;
   align-items: flex-start;
-  margin-right: 1rem;
+  margin: 1rem 1rem;
   background: #242526;
 `
 
@@ -37,7 +36,8 @@ const TopDiv = styled.div`
   align-items: center;
   flex-direction: column;
   height: 100px;
-  width: 100px;
+  width: 100%;
+  padding-bottom: 1rem;
 `
 
 export { Container, Text, TopDiv }

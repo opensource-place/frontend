@@ -5,7 +5,6 @@ import {
   Projects,
   LandingPage,
   Start,
-  Doc,
   Login,
   ProjectDetail
 } from './pages'
@@ -21,7 +20,6 @@ const Router = () => {
         <Route exact path="/" component={LandingPage} />
         <Route path="/projects" component={Projects} />
         <Route path="/start" component={Start} />
-        <Route path="/doc" component={Doc} />
         <Route path="/login" component={Login} />
         <Route
           path="/project/:projectname/:reponame"

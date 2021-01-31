@@ -7,6 +7,16 @@ function ProjectDetail () {
   const { projectname, reponame } = useParams()
   const [issues, setIssues] = useState([])
 
+  const findDate = (datex) => {
+    // const datex = "2021-01-20T17:08:40Z";
+    const porti = datex.slice(0, 10).split('-')
+    const a = porti[0]
+    porti[0] = porti[2]
+    porti[2] = a
+    const b = porti.join().replaceAll(',', '-')
+    return b
+  }
+
   useEffect(() => {
     projectFetch()
   }, [])
@@ -16,6 +26,7 @@ function ProjectDetail () {
       issues(pathname:"/${projectname}/${reponame}") {
         html_url
         title
+        created_at
         user{
             avatar_url
         }
@@ -46,6 +57,7 @@ function ProjectDetail () {
               src={item.user.avatar_url}
               alt="The issue creator"
             />
+            <h2>{findDate(item.created_at)}</h2>
           </div>
         ))}
       </Issues>
