@@ -8,7 +8,7 @@ const ProjectCard = ({ repository }) => {
   const pathx = path.split('/')
   return (
     <Container>
-      <Progressbar repository={repository} />
+      <Progressbar issues={repository.issues} />
       <TopDiv>
         <Text>
           {pathx[2]}📌{pathx[3]}

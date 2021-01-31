@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Issues, Details } from './style'
+import { Container, Issues, Details, IssuesDetail } from './style'
 import { useParams } from 'react-router-dom'
+import { Progressbar } from '../index'
 import axios from 'axios'
 
 function ProjectDetail () {
@@ -43,11 +44,11 @@ function ProjectDetail () {
         <h1>
           {projectname} - {reponame}
         </h1>
-        <h2>Total issue: {issues.length}</h2>
+        <Progressbar issues={issues} />
       </Details>
       <Issues>
         {issues.map((item, i) => (
-          <div key={i}>
+          <IssuesDetail key={i}>
             <a href={item.html_url}>
               <h2>{item.title}</h2>
             </a>
@@ -58,7 +59,7 @@ function ProjectDetail () {
               alt="The issue creator"
             />
             <h2>{findDate(item.created_at)}</h2>
-          </div>
+          </IssuesDetail>
         ))}
       </Issues>
     </Container>
