@@ -3,7 +3,7 @@ import { Container, TopDiv } from './style'
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar'
 
 const Progressbar = ({ issues }) => {
-  const progress = issues.length * 3.3
+  const progress = issues.length
   return (
     <Container>
       <TopDiv>
