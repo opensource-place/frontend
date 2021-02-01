@@ -20,13 +20,15 @@ function ProjectDetail () {
   const [issues, setIssues] = useState([])
 
   const findDate = (datex) => {
-    // const datex = "2021-01-20T17:08:40Z";
-    const porti = datex.slice(0, 10).split('-')
-    const a = porti[0]
-    porti[0] = porti[2]
-    porti[2] = a
-    const b = porti.join().replaceAll(',', '-')
-    return b
+    if (!datex) return 'invalid time error'
+    const dayConvert = 1000 * 3600 * 24
+    const milisaniye = new Date(datex).getTime()
+
+    const sonuc = Date.now() - milisaniye
+
+    const gunHesapla = Math.ceil(sonuc / dayConvert)
+
+    return gunHesapla
   }
 
   useEffect(() => {
@@ -86,7 +88,7 @@ function ProjectDetail () {
               src={item.user.avatar_url}
               alt="The issue creator"
             />
-            <h2>{findDate(item.created_at)}</h2>
+            <h2>opened {findDate(item.created_at)} days ago </h2>
           </IssuesDetail>
         ))}
       </Issues>
