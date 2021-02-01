@@ -41,7 +41,8 @@ function ProjectDetail () {
   return (
     <Container>
       <Details>
-        <h1>
+
+        <h1 style={{ color: '#4B7D74' }}>
           {projectname} - {reponame}
         </h1>
         <Progressbar issues={issues} />

@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-justify-content: space-between;
-min-height: 100vh;
-background-color: 'red';
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: "red";
 `
 export const HeaderUp = styled.div`
   display: flex;
@@ -21,12 +21,13 @@ export const HeaderUp = styled.div`
   @media screen and (min-width: 320px) {
     height: 50%;
   }
-  background: url('https://image.freepik.com/free-vector/mars-landscape-alien-planet-martian-background_107791-1781.jpg') no-repeat center/cover;
+  background: url("https://image.freepik.com/free-vector/mars-landscape-alien-planet-martian-background_107791-1781.jpg")
+    no-repeat center/cover;
   text-align: center;
 `
 
 export const Invite = styled.div`
-  margin-top:  1em;
+  margin-top: 1em;
 `
 export const Description = styled.div`
   width: 612px;
@@ -34,7 +35,6 @@ export const Description = styled.div`
   padding: 10px;
   display: flex;
   justify-content: center;
-
 `
 
 export const Center = styled.div`
@@ -64,6 +64,40 @@ export const DarkenBackground = styled.div`
 export const AddSomeMargin = styled.div`
   margin: 5em;
   padding: 25px;
-  background: rgba(255, 255, 255, .15);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 5px;
+`
+export const MainContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  @media screen and (min-width: 1024px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 320px) {
+    width: 100%;
+  }
+`
+
+export const Containerx = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 1024px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 320px) {
+    width: 100%;
+  }
 `
