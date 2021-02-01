@@ -1,8 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Issues, Details, IssuesDetail } from './style'
+import {
+  Container,
+  Issues,
+  Details,
+  IssuesDetail,
+  DetailsRight,
+  DetailsRightRow,
+  DetailsRightText,
+  DetailsMiddle,
+  DetailsLeft
+} from './style'
 import { useParams } from 'react-router-dom'
 import { Progressbar } from '../index'
 import axios from 'axios'
+import { Fork, View, Star } from '../../assets'
 
 function ProjectDetail () {
   const { projectname, reponame } = useParams()
@@ -41,11 +52,27 @@ function ProjectDetail () {
   return (
     <Container>
       <Details>
-
-        <h1 style={{ color: '#4B7D74' }}>
-          {projectname} - {reponame}
-        </h1>
-        <Progressbar issues={issues} />
+        <DetailsLeft>
+          <h3 style={{ color: '#4B7D74' }}>{reponame}</h3>
+        </DetailsLeft>
+        <DetailsMiddle>
+          <Progressbar issues={issues} />
+        </DetailsMiddle>
+        <DetailsRight>
+          <h6 style={{ color: '#4B7D74' }}>JavaScript</h6>
+          <DetailsRightRow>
+            <img src={View} />
+            <DetailsRightText>78</DetailsRightText>
+          </DetailsRightRow>
+          <DetailsRightRow>
+            <img src={Star} />
+            <DetailsRightText>78</DetailsRightText>
+          </DetailsRightRow>
+          <DetailsRightRow>
+            <img src={Fork} />
+            <DetailsRightText>78</DetailsRightText>
+          </DetailsRightRow>
+        </DetailsRight>
       </Details>
       <Issues>
         {issues.map((item, i) => (
