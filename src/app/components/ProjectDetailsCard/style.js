@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   @media screen and (min-width: 1024px) {
   }
 
@@ -9,22 +14,17 @@ const Container = styled.div`
 
   @media screen and (min-width: 320px) {
   }
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
 `
 
 const Details = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #4b7d74;
+  border-radius: 30px;
   color: white;
   padding: 1rem;
+  margin: 125px 0 79px;
 `
 const Issues = styled.div`
   display: flex;
@@ -41,8 +41,9 @@ const IssuesDetail = styled.div`
   align-items: center;
   flex-direction: column;
   border: 1px solid black;
-  width: 37.5rem;
-  margin: 1rem;
+  width: 540px;
+  margin: 5.5px;
+  border-radius: 30px;
 `
 
 export { Container, Issues, Details, IssuesDetail }

@@ -1,11 +1,16 @@
 import React from 'react'
 import { Footer, NavBar, ProjectDetailsCard } from '../components'
+import { MainContainer, Containerx } from './style'
 
 const ProjectDetail = () => {
   return (
     <>
       <NavBar />
-        <ProjectDetailsCard />
+      <Containerx>
+        <MainContainer>
+          <ProjectDetailsCard />
+        </MainContainer>
+      </Containerx>
       <Footer />
     </>
   )
