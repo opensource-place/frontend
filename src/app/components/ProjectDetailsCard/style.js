@@ -18,13 +18,14 @@ const Container = styled.div`
 
 const Details = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid #4b7d74;
   border-radius: 30px;
   color: white;
   padding: 1rem;
   margin: 125px 0 79px;
+  width: 540px;
 `
 const Issues = styled.div`
   display: flex;
@@ -46,4 +47,37 @@ const IssuesDetail = styled.div`
   border-radius: 30px;
 `
 
-export { Container, Issues, Details, IssuesDetail }
+const DetailsLeft = styled.div``
+const DetailsMiddle = styled.div`
+  margin: 0 15px;
+`
+const DetailsRight = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 125px;
+`
+const DetailsRightRow = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-height: 12px;
+  margin-bottom: 6px;
+`
+const DetailsRightText = styled.p`
+  display: flex;
+  margin-left: 6px;
+`
+
+export {
+  Container,
+  Issues,
+  Details,
+  IssuesDetail,
+  DetailsRight,
+  DetailsRightRow,
+  DetailsRightText,
+  DetailsMiddle,
+  DetailsLeft
+}
