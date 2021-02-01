@@ -13,7 +13,7 @@ const Start = () => {
     const url = 'http://localhost:8080'
 
     const res = await axios.post(`${url}/repository`, {
-      url: issue
+      url: 'https://github.com/' + issue
     })
 
     setDBStatus(res.data.result)
@@ -21,29 +21,29 @@ const Start = () => {
   }
 
   return (
-    <div className='min-h-screen flex flex-col items-center dark:bg-gray-800 bg-gray-200'>
+    <div className="min-h-screen flex flex-col items-center dark:bg-gray-800 bg-gray-200">
       <NavBar />
       {getDBStatus
         ? (
-        <div className='alert alert-primary my-3 ' role='alert'>
+        <div className="alert alert-primary my-3 " role="alert">
           {getDBStatusMSG}
         </div>
           )
         : null}
-      <div className='container'>
-        <div className='row mt-3'>
-          <div className='d-flex justify-content-center align-items-center flex-row'>
+      <div className="container">
+        <div className="row mt-3">
+          <div className="d-flex justify-content-center align-items-center flex-row">
             <input
-              type='text'
-              className='form-control'
+              type="text"
+              className="form-control"
               onChange={(e) => setIssue(e.target.value)}
-              placeholder='GitHub Repository URL (opensourceadam-place/wiki)'
-              name='note'
+              placeholder="GitHub Repository URL (opensourceadam-place/wiki)"
+              name="note"
             />
             <button
               onClick={addIssue}
-              type='Submit'
-              className='w-25 form-control btn btn-primary'
+              type="Submit"
+              className="w-25 form-control btn btn-primary"
             >
               Add Project
             </button>
