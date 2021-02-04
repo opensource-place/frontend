@@ -1,9 +1,12 @@
 import React from 'react'
-import { Container, TopDiv } from './style'
-import { CircularProgressbarWithChildren } from 'react-circular-progressbar'
+import { Container, TopDiv, Text, LengthText } from './style'
+import {
+  buildStyles,
+  CircularProgressbarWithChildren
+} from 'react-circular-progressbar'
 
 const Progressbar = ({ issues }) => {
-  const progress = issues.length * 3.3
+  const progress = issues.length
   return (
     <Container>
       <TopDiv>
@@ -15,18 +18,18 @@ const Progressbar = ({ issues }) => {
             color: 'white'
           }}
         >
-          <CircularProgressbarWithChildren value={progress}>
-            <div
-              style={{
-                fontSize: 12,
-                marginTop: -5,
-                display: 'flex',
-                justifyContent: 'center'
-              }}
-            >
-              <strong>{issues.length}</strong> <br />
+          <CircularProgressbarWithChildren
+            value={progress}
+            style={{ pathColor: 'red' }}
+            styles={buildStyles({
+              pathColor: '#18CFAB',
+              trailColor: '#4B7D74'
+            })}
+          >
+            <Text>
+              <LengthText>{issues.length}</LengthText>
               issues
-            </div>
+            </Text>
           </CircularProgressbarWithChildren>
         </div>
       </TopDiv>

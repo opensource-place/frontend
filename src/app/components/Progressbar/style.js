@@ -17,7 +17,19 @@ const Container = styled.div`
   width: 100%;
 `
 
-const Text = styled.h1``
+const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: -5px;
+  color: #18cfab;
+`
 const TopDiv = styled.div``
+const LengthText = styled.strong`
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+`
 
-export { Container, Text, TopDiv }
+export { Container, Text, TopDiv, LengthText }
