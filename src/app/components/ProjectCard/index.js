@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Text, TopDiv } from './style'
+import { Container, Text, TopDiv, BottomDiv } from './style'
 import { StyledButton, Progressbar } from '../index'
 
 const ProjectCard = ({ repository }) => {
@@ -8,15 +8,15 @@ const ProjectCard = ({ repository }) => {
   const pathx = path.split('/')
   return (
     <Container>
-      <Progressbar issues={repository.issues} />
       <TopDiv>
-        <Text>
-          {pathx[2]}📌{pathx[3]}
-        </Text>
-        <Link to={path}>
-          <StyledButton>Details</StyledButton>
-        </Link>
+        <Progressbar issues={repository.issues} />
+        <Text>{pathx[3]}</Text>
       </TopDiv>
+      <BottomDiv>
+        <Link to={path}>
+          <StyledButton primary>Details</StyledButton>
+        </Link>
+      </BottomDiv>
     </Container>
   )
 }
