@@ -14,7 +14,6 @@ const Progressbar = ({ issues }) => {
           style={{
             width: 112.98,
             height: 112.98,
-            marginTop: 30,
             color: 'white'
           }}
         >
