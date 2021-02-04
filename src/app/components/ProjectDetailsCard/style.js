@@ -26,6 +26,7 @@ const Details = styled.div`
   padding: 1rem;
   margin: 125px 0 79px;
   width: 540px;
+  background: #212529;
 `
 const Issues = styled.div`
   display: flex;
@@ -67,7 +68,11 @@ const DetailsRightRow = styled.div`
 `
 const DetailsRightText = styled.p`
   display: flex;
-  margin-left: 6px;
+  margin: 0 0 0 6px;
+  color: #4b7d74;
+`
+const Language = styled.h6`
+  color: #4b7d74;
 `
 
 export {
@@ -79,5 +84,6 @@ export {
   DetailsRightRow,
   DetailsRightText,
   DetailsMiddle,
-  DetailsLeft
+  DetailsLeft,
+  Language
 }

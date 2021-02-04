@@ -8,7 +8,8 @@ import {
   DetailsRightRow,
   DetailsRightText,
   DetailsMiddle,
-  DetailsLeft
+  DetailsLeft,
+  Language
 } from './style'
 import { useParams } from 'react-router-dom'
 import { Progressbar } from '../index'
@@ -61,7 +62,7 @@ function ProjectDetail () {
           <Progressbar issues={issues} />
         </DetailsMiddle>
         <DetailsRight>
-          <h6 style={{ color: '#4B7D74' }}>JavaScript</h6>
+          <Language>JavaScript</Language>
           <DetailsRightRow>
             <img src={View} />
             <DetailsRightText>78</DetailsRightText>
