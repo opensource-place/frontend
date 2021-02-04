@@ -34,7 +34,6 @@ const Issues = styled.div`
   align-items: start;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 1px solid black;
 `
 
 const IssuesDetail = styled.div`
@@ -42,10 +41,10 @@ const IssuesDetail = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid black;
   width: 540px;
   margin: 5.5px;
   border-radius: 30px;
+  background: #212529;
 `
 
 const DetailsLeft = styled.div``
@@ -75,6 +74,23 @@ const Language = styled.h6`
   color: #4b7d74;
 `
 
+const BottomDiv = styled.div`
+  display: flex;
+  margin-top: 24px;
+`
+const Readme = styled.div`
+  background: #212529;
+  color: white;
+  padding: 20px;
+  max-width: 640px;
+  margin-right: 10px;
+  border-radius: 30px;
+`
+
+const Text = styled.h4`
+  color: #4b7d74;
+`
+
 export {
   Container,
   Issues,
@@ -85,5 +101,8 @@ export {
   DetailsRightText,
   DetailsMiddle,
   DetailsLeft,
-  Language
+  BottomDiv,
+  Language,
+  Readme,
+  Text
 }
