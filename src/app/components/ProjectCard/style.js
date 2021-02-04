@@ -18,26 +18,32 @@ const Container = styled.div`
   }
   display: flex;
   flex-direction: column;
-  justify-content: center;
   border: thick solid #4b7d74;
   border-radius: 30px;
-  align-items: flex-start;
+  justify-content: space-between;
   margin: 1rem 1rem;
   background: #242526;
 `
 
 const Text = styled.h1`
   font-size: 1rem;
-  color: white;
+  color: #20c997;
+  margin-top: 10px;
+`
+const BottomDiv = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100px;
+  width: 100%;
 `
 const TopDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100px;
   width: 100%;
-  padding-bottom: 1rem;
+  margin-top: 25px;
 `
 
-export { Container, Text, TopDiv }
+export { Container, Text, TopDiv, BottomDiv }
