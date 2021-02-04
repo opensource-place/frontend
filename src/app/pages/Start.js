@@ -13,7 +13,7 @@ const Start = () => {
     const url = 'http://localhost:8080'
 
     const res = await axios.post(`${url}/repository`, {
-      url: 'https://github.com/' + issue
+      url: issue
     })
 
     setDBStatus(res.data.result)
