@@ -3,7 +3,6 @@ html, body, #app {
   min-height: 100vh;
   font-family: 'Chakra Petch', sans-serif;
   outline: none;
-  background: #303132;
 }
 
 a {

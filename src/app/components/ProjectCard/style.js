@@ -18,16 +18,15 @@ const Container = styled.div`
   }
   display: flex;
   flex-direction: column;
-  border: thick solid #4b7d74;
+  border: 1px solid #4b7d74;
   border-radius: 30px;
   justify-content: space-between;
   margin: 1rem 1rem;
-  background: #242526;
 `
 
 const Text = styled.h1`
   font-size: 1rem;
-  color: #20c997;
+  color: #000;
   margin-top: 10px;
 `
 const BottomDiv = styled.div`

@@ -6,6 +6,7 @@ const StyledButton = styled.button`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   border: ${(props) => props.border};
+  margin-right: ${(props) => props.margin};
   color: ${(props) => props.color};
   border-radius: ${(props) => props.radius};
   font-weight: ${(props) => props.fontWeight};
