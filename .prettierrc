@@ -3,5 +3,8 @@
   "trailingComma": "none",
   "tabWidth": 2,
   "semi": false,
-  "singleQuote": true
+  "singleQuote": true,
+  "space-before-function-paren",
+  spaceBeforeFunctionParen: argv["space-before-function-paren"]
+
 }
