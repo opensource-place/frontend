@@ -1,25 +1,28 @@
 import React from 'react'
-import { ProjectList, NavBar, Footer } from '../components/'
+import { ProjectList, NavBar, Footer, SearchBox } from '../components/'
 import styled from 'styled-components'
+import { Containerx, MainContainer } from './style'
 
-const MinHeight = styled.div`
+const Search = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+  justify-content: flex-start;
 `
 
 const Projects = () => {
   return (
-    <MinHeight>
-      <div>
-        <NavBar />
-        <div style={{ marginLeft: '50px', marginRight: '50px' }}>
-            <ProjectList />
-        </div>
-      </div>
+    <>
+      <NavBar />
+      <Containerx>
+        <MainContainer>
+          <Search>
+            <SearchBox />
+          </Search>
+          <ProjectList />
+        </MainContainer>
+      </Containerx>
       <Footer />
-    </MinHeight>
+    </>
   )
 }
 

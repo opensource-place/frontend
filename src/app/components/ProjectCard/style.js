@@ -21,7 +21,7 @@ const Container = styled.div`
   border: 1px solid #4b7d74;
   border-radius: 30px;
   justify-content: space-between;
-  margin: 1rem 1rem;
+  margin: 2rem 0.6rem;
 `
 
 const Text = styled.h1`

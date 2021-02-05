@@ -34,9 +34,7 @@ const LandingPage = () => {
         }
       }`
       dispatch({ type: CONSTANTS.FETHING_PROJECTS })
-      const res = await axios.get(
-        `http://localhost:8080/graphql?query=${query}`
-      )
+      const res = await axios.get(`http://localhost:8080/graphql?query=${query}`)
       dispatch({
         type: CONSTANTS.FETCHED_PROJECTS,
         payload: res.data.data.repositories
@@ -52,9 +50,9 @@ const LandingPage = () => {
         <DarkenBackground>
           <AddSomeMargin>
             <h2 style={{ color: '#444', fontWeight: 'bold' }}>
-              The platform includes open source projects. You can list all
-              published open-source projects and also add your project on Github
-              to the platform and your projects make open source!
+              The platform includes open source projects. You can list all published open-source
+              projects and also add your project on Github to the platform and your projects make
+              open source!
             </h2>
             <Invite>
               <Center>
@@ -95,11 +93,10 @@ const LandingPage = () => {
           <Description>
             <img width="200" height="200" src={Example} />
             <p style={{ color: 'white' }}>
-              Irure ad ipsum fugiat nisi ullamco ipsum ullamco anim non fugiat.
-              Consectetur eu veniam sint esse commodo exercitation esse. Ex elit
-              aliqua aliquip consequat eiusmod fugiat veniam labore id. Dolore
-              eu voluptate Lorem eiusmod ex aliquip incididunt. Laborum enim
-              adipisicing do anim esse excepteur.
+              Irure ad ipsum fugiat nisi ullamco ipsum ullamco anim non fugiat. Consectetur eu
+              veniam sint esse commodo exercitation esse. Ex elit aliqua aliquip consequat eiusmod
+              fugiat veniam labore id. Dolore eu voluptate Lorem eiusmod ex aliquip incididunt.
+              Laborum enim adipisicing do anim esse excepteur.
             </p>
           </Description>
         </div>
@@ -112,11 +109,10 @@ const LandingPage = () => {
         >
           <Description>
             <p style={{ color: 'white' }}>
-              Irure ad ipsum fugiat nisi ullamco ipsum ullamco anim non fugiat.
-              Consectetur eu veniam sint esse commodo exercitation esse. Ex elit
-              aliqua aliquip consequat eiusmod fugiat veniam labore id. Dolore
-              eu voluptate Lorem eiusmod ex aliquip incididunt. Laborum enim
-              adipisicing do anim esse excepteur.
+              Irure ad ipsum fugiat nisi ullamco ipsum ullamco anim non fugiat. Consectetur eu
+              veniam sint esse commodo exercitation esse. Ex elit aliqua aliquip consequat eiusmod
+              fugiat veniam labore id. Dolore eu voluptate Lorem eiusmod ex aliquip incididunt.
+              Laborum enim adipisicing do anim esse excepteur.
             </p>
             <img width="200" height="200" src={Example} />
           </Description>

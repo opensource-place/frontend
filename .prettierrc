@@ -5,6 +5,4 @@
   "semi": false,
   "singleQuote": true,
   "space-before-function-paren",
-  spaceBeforeFunctionParen: argv["space-before-function-paren"]
-
 }

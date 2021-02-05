@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   justify-content: space-between;
   min-height: 100vh;
-  background-color: "red";
+  background-color: 'red';
 `
 export const HeaderUp = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ export const HeaderUp = styled.div`
   @media screen and (min-width: 320px) {
     height: 50%;
   }
-  background: url("https://image.freepik.com/free-vector/mars-landscape-alien-planet-martian-background_107791-1781.jpg")
+  background: url('https://image.freepik.com/free-vector/mars-landscape-alien-planet-martian-background_107791-1781.jpg')
     no-repeat center/cover;
   text-align: center;
 `
@@ -89,6 +89,7 @@ export const Containerx = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 125px;
   @media screen and (min-width: 1024px) {
     width: 100%;
   }
