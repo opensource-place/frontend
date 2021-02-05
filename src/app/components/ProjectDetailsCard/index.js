@@ -42,8 +42,8 @@ function ProjectDetail () {
 
   const projectFetch = async () => {
     const query = `{
-      issues(pathname:"/${projectname}/${reponame}") {
-        html_url
+          issues(pathname:"/${projectname}/${reponame}") {
+            html_url
         title
         created_at
         user{
@@ -66,9 +66,7 @@ function ProjectDetail () {
     const res = await axios.get(`http://localhost:8080/graphql?query=${query}`)
     setIssues(res.data.data.issues)
 
-    const repox = await axios.get(
-      `http://localhost:8080/graphql?query=${repos}`
-    )
+    const repox = await axios.get(`http://localhost:8080/graphql?query=${repos}`)
     setRepo(repox.data.data.repository)
   }
 
