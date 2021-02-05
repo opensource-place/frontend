@@ -27,8 +27,10 @@ const StyledButton = styled.button`
       ? '#00463A'
       : props.easy
       ? '#008622'
+      : props.deneme
+      ? '#1F8874'
       : props.primary
-      ? '#1FB79B'
+      ? '#1F8874'
       : '#00000'};
   padding: ${(props) => props.padding || '1rem'};
 `

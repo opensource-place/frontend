@@ -83,7 +83,17 @@ const ProjectCard = ({ repository }) => {
       />
       <BottomDiv>
         <Link to={path}>
-          <StyledButton primary>Details</StyledButton>
+          <StyledButton
+            deneme
+            fontSize="14px"
+            border="0px"
+            color="#fff"
+            height="36px"
+            width="160px"
+            radius="15px"
+          >
+            Details
+          </StyledButton>
         </Link>
       </BottomDiv>
     </Container>
