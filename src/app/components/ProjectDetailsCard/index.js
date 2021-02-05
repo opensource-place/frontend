@@ -12,10 +12,11 @@ import {
   Language,
   BottomDiv,
   Readme,
-  Text
+  Text,
+  Label
 } from './style'
 import { useParams } from 'react-router-dom'
-import { Progressbar } from '../index'
+import { Progressbar, StyledButton } from '../index'
 import axios from 'axios'
 import { Fork, View, Star } from '../../assets'
 import Markdown from 'markdown-to-jsx'
@@ -77,6 +78,8 @@ function ProjectDetail () {
     setContent(await res.data)
   }
 
+  console.log(issues)
+
   return (
     <Container>
       <Details>
@@ -105,36 +108,31 @@ function ProjectDetail () {
       <Issues>
         {issues.map((item, i) => (
           <IssuesDetail key={i}>
-            <a href={item.html_url}>
-              <Text>{item.title}</Text>
-            </a>
-            <img
-              height="50px"
-              width="50px"
-              src={item.user.avatar_url}
-              alt="The issue creator"
-              style={{
-                borderRadius: '100%'
-              }}
-            />
-            <Text>opened {findDate(item.created_at)} days ago</Text>
-          </IssuesDetail>
+              <Label>
+                    <StyledButton issue border="0px" margin="3px" radius="30px" color="#fff" width="124px" fontSize="12px" height="24px">good first issue</StyledButton>
+                    <StyledButton dublicate border="0px" radius="30px" color="#fff" width="124px" fontSize="12px" height="24px">dublicate</StyledButton>
+                  </Label>
+                <a href={item.html_url}>
+                  <Text>{item.title}</Text>
+                </a>
+                <Text>#78, {findDate(item.created_at)} days, by furkanportakal </Text>
+              </IssuesDetail>
         ))}
-      </Issues>
-      <BottomDiv>
-        <Readme>
-          <Markdown>{content}</Markdown>
-        </Readme>
-        <Readme>
-          <h1>Where does it come from?</h1>
-          {issues.map((item, i) => (
-            <IssuesDetail key={i}>
-              <a href={item.html_url}>
-                <Text>{item.title}</Text>
+          </Issues>
+          <BottomDiv>
+            <Readme>
+              <Markdown>{content}</Markdown>
+            </Readme>
+            <Readme>
+              <h1>Where does it come from?</h1>
+              {issues.map((item, i) => (
+                <IssuesDetail key={i}>
+                  <a href={item.html_url}>
+                    <Text>{item.title}</Text>
               </a>
-              <Text>opened {findDate(item.created_at)} days ago</Text>
+                <Text>#78, {findDate(item.created_at)} days, by furkanportakal </Text>
             </IssuesDetail>
-          ))}
+              ))}
         </Readme>
       </BottomDiv>
     </Container>

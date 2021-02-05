@@ -26,7 +26,8 @@ const Details = styled.div`
   padding: 1rem;
   margin: 125px 0 79px;
   width: 540px;
-  background: #212529;
+  height:190px;
+  border: 2px solid rgba(60, 176, 155,10%)
 `
 const Issues = styled.div`
   display: flex;
@@ -44,7 +45,7 @@ const IssuesDetail = styled.div`
   width: 540px;
   margin: 5.5px;
   border-radius: 30px;
-  background: #212529;
+  border: 2px solid rgba(60, 176, 155,10%)
 `
 
 const DetailsLeft = styled.div``
@@ -79,16 +80,24 @@ const BottomDiv = styled.div`
   margin-top: 24px;
 `
 const Readme = styled.div`
-  background: #212529;
-  color: white;
   padding: 20px;
   max-width: 640px;
   margin-right: 10px;
+    border: 2px solid rgba(60, 176, 155,10%);
   border-radius: 30px;
 `
 
 const Text = styled.h4`
-  color: #4b7d74;
+  font-size:12px;
+  font-weight:medium !important;
+  color: #000;
+`
+
+const Label = styled.div`
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin: 24px 0 8px 0;
 `
 
 export {
@@ -104,5 +113,7 @@ export {
   BottomDiv,
   Language,
   Readme,
-  Text
+  Text,
+  Label
+
 }

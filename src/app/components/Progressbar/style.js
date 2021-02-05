@@ -23,7 +23,7 @@ const Text = styled.div`
   justify-content: center;
   font-size: 12px;
   margin-top: -5px;
-  color: #18cfab;
+  color: #333333;
 `
 const TopDiv = styled.div``
 const LengthText = styled.strong`
