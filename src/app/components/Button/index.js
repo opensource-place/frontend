@@ -14,6 +14,8 @@ const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
   font-size: ${(props) => props.fontSize};
+  background-color: ${(props) => props.bcolor};
+
   background: ${(props) =>
     props.dublicate
       ? '#FFC107'
