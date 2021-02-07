@@ -47,8 +47,14 @@ const ProjectDetail = () => {
             html_url
         title
         created_at
+        number
         user{
+        login
             avatar_url
+        }
+        labels{
+        name
+        color
         }
       }
     }`
@@ -107,34 +113,28 @@ const ProjectDetail = () => {
         {issues.map((item, i) => (
           <IssuesDetail key={i}>
             <Label>
-              <StyledButton
-                issue
-                border="0px"
-                margin="3px"
-                radius="30px"
-                color="#fff"
-                width="124px"
-                fontSize="12px"
-                height="24px"
-              >
-                good first issue
-              </StyledButton>
-              <StyledButton
-                dublicate
-                border="0px"
-                radius="30px"
-                color="#fff"
-                width="124px"
-                fontSize="12px"
-                height="24px"
-              >
-                dublicate
-              </StyledButton>
+              {item.labels.map((label, i) => (
+                <StyledButton
+                  key={i}
+                  bcolor={`#${label.color}`}
+                  border="0px"
+                  margin="3px"
+                  radius="30px"
+                  color="#fff"
+                  width="124px"
+                  fontSize="12px"
+                  height="24px"
+                >
+                  {label.name}
+                </StyledButton>
+              ))}
             </Label>
             <a href={item.html_url}>
               <Text>{item.title}</Text>
             </a>
-            <Text>#78, {findDate(item.created_at)} days, by furkanportakal </Text>
+            <Text>
+              #{item.number}, {findDate(item.created_at)} days, by {item.user.login}{' '}
+            </Text>
           </IssuesDetail>
         ))}
       </Issues>
@@ -149,7 +149,9 @@ const ProjectDetail = () => {
               <a href={item.html_url}>
                 <Text>{item.title}</Text>
               </a>
-              <Text>#78, {findDate(item.created_at)} days, by furkanportakal </Text>
+              <Text>
+                #{item.number}, {findDate(item.created_at)} days, by {item.user.login}{' '}
+              </Text>
             </IssuesDetail>
           ))}
         </Readme>
