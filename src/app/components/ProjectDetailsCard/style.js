@@ -46,6 +46,7 @@ const IssuesDetail = styled.div`
   margin: 5.5px;
   border-radius: 30px;
   border: 2px solid rgba(60, 176, 155, 10%);
+  padding: 1rem;
 `
 
 const DetailsLeft = styled.div``
@@ -78,6 +79,7 @@ const Language = styled.h6`
 const BottomDiv = styled.div`
   display: flex;
   margin-top: 24px;
+  margin-bottom: 48px;
 `
 const Readme = styled.div`
   padding: 20px;
@@ -88,6 +90,9 @@ const Readme = styled.div`
 `
 
 const Text = styled.h4`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 12px;
   font-weight: medium !important;
   color: #000;

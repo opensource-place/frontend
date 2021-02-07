@@ -18,7 +18,7 @@ import {
 import { useParams } from 'react-router-dom'
 import { Progressbar, StyledButton } from '../index'
 import axios from 'axios'
-import { Fork, View, Star } from '../../assets'
+import { Fork, View, Star, IssuesWarning } from '../../assets'
 import Markdown from 'markdown-to-jsx'
 
 const ProjectDetail = () => {
@@ -135,6 +135,7 @@ const ProjectDetail = () => {
             <Text>
               #{item.number}, {findDate(item.created_at)} days, by {item.user.login}{' '}
             </Text>
+            <img src={IssuesWarning} alt="warning" style={{ marginBottom: '9px' }} />
           </IssuesDetail>
         ))}
       </Issues>
