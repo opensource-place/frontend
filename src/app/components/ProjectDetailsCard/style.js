@@ -37,6 +37,14 @@ const Issues = styled.div`
   flex-wrap: wrap;
 `
 
+const IssuesFull = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  padding: 20px;
+  max-width: 640px;
+  margin-right: 10px;
+`
 const IssuesDetail = styled.div`
   display: flex;
   justify-content: center;
@@ -46,7 +54,19 @@ const IssuesDetail = styled.div`
   margin: 5.5px;
   border-radius: 30px;
   border: 2px solid rgba(60, 176, 155, 10%);
-  padding: 1rem;
+  padding: 0 1rem;
+`
+
+const IssuesDetailRigth = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  flex-direction: column;
+`
+const IssuesDetailLeft = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const DetailsLeft = styled.div``
@@ -87,6 +107,14 @@ const Readme = styled.div`
   margin-right: 10px;
   border: 2px solid rgba(60, 176, 155, 10%);
   border-radius: 30px;
+  font-size: 12px;
+`
+const TextB = styled.h4`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #9f9f9f;
 `
 
 const Text = styled.h4`
@@ -109,7 +137,10 @@ export {
   Container,
   Issues,
   Details,
+  IssuesFull,
   IssuesDetail,
+  IssuesDetailRigth,
+  IssuesDetailLeft,
   DetailsRight,
   DetailsRightRow,
   DetailsRightText,
@@ -119,5 +150,6 @@ export {
   Language,
   Readme,
   Text,
+  TextB,
   Label
 }

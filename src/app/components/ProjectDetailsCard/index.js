@@ -4,6 +4,9 @@ import {
   Issues,
   Details,
   IssuesDetail,
+  IssuesFull,
+  IssuesDetailRigth,
+  IssuesDetailLeft,
   DetailsRight,
   DetailsRightRow,
   DetailsRightText,
@@ -13,6 +16,7 @@ import {
   BottomDiv,
   Readme,
   Text,
+  TextB,
   Label
 } from './style'
 import { useParams } from 'react-router-dom'
@@ -141,19 +145,28 @@ const ProjectDetail = () => {
       </Issues>
       <BottomDiv>
         <Readme>
+          <TextB>README.md</TextB>
           <Markdown>{content}</Markdown>
         </Readme>
         <Readme>
-          <h1>Where does it come from?</h1>
           {issues.map((item, i) => (
-            <IssuesDetail key={i}>
-              <a href={item.html_url}>
-                <Text>{item.title}</Text>
-              </a>
-              <Text>
-                #{item.number}, {findDate(item.created_at)} days, by {item.user.login}{' '}
-              </Text>
-            </IssuesDetail>
+            <IssuesFull key={i}>
+              <IssuesDetailLeft>
+                <img
+                  src={IssuesWarning}
+                  alt="warning"
+                  style={{ marginBottom: '9px', marginRight: '10px' }}
+                />
+              </IssuesDetailLeft>
+              <IssuesDetailRigth>
+                <a href={item.html_url}>
+                  <Text>{item.title}</Text>
+                </a>
+                <Text>
+                  #{item.number}, {findDate(item.created_at)} days, by {item.user.login}{' '}
+                </Text>
+              </IssuesDetailRigth>
+            </IssuesFull>
           ))}
         </Readme>
       </BottomDiv>
