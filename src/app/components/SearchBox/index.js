@@ -1,5 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
+import { useSelector, useDispatch } from 'react-redux'
+import CONSTANTS from '../../redux/actions'
 
 const Search = styled.div`
   display: flex;
@@ -9,10 +10,20 @@ const Search = styled.div`
   margin: 0 48px 0 0;
 `
 
+/*eslint-disable*/
 const SearchBox = () => {
+  const { filter } = useSelector((state) => state.projects)
+  const dispatch = useDispatch()
+
   return (
     <Search>
-      <h1>deneme</h1>
+      <div>
+        <input
+          className="Input"
+          value={filter}
+          onChange={(e) => dispatch({ type: CONSTANTS.FILTER, filter: e.target.value })}
+        />
+      </div>
     </Search>
   )
 }

@@ -4,7 +4,8 @@ const initialState = {
   projects: [],
   isLoading: false,
   isLoaded: false,
-  hasError: false
+  hasError: false,
+  filter: ''
 }
 
 const projectReducer = (state = initialState, action) => {
@@ -26,6 +27,11 @@ const projectReducer = (state = initialState, action) => {
         ...state,
         isLoading: false,
         hasError: true
+      }
+    case CONSTANTS.FILTER:
+      return {
+        ...state,
+        filter: action.filter
       }
 
     default:
