@@ -3,7 +3,6 @@ import { ProjectCard } from '../../components'
 import { useSelector, useDispatch } from 'react-redux'
 import CONSTANTS from '../../redux/actions'
 import axios from 'axios'
-import { createFilter } from 'react-search-input'
 
 const ProjectList = () => {
   /*eslint-disable */
@@ -35,15 +34,12 @@ const ProjectList = () => {
       dispatch({ type: CONSTANTS.ERROR })
     }
   }
-  console.log(filter)
-  const KEYS_TO_FILTERS = ['pathname']
-  const filteredProjects = projects.filter(createFilter(filter, KEYS_TO_FILTERS))
-  console.log(filteredProjects)
+  console.log(projects)
 
   return (
     <div>
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-        {filteredProjects.map((data, index) => (
+        {projects.map((data, index) => (
           <div key={index}>
             <ProjectCard repository={data} />
           </div>
