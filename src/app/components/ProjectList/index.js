@@ -5,7 +5,8 @@ import CONSTANTS from '../../redux/actions'
 import axios from 'axios'
 
 const ProjectList = () => {
-  const { projects } = useSelector((state) => state.projects)
+  /*eslint-disable */
+  const { projects, filter } = useSelector((state) => state.projects)
 
   const dispatch = useDispatch()
 
@@ -24,9 +25,7 @@ const ProjectList = () => {
         }
       }`
       dispatch({ type: CONSTANTS.FETHING_PROJECTS })
-      const res = await axios.get(
-        `http://localhost:8080/graphql?query=${query}`
-      )
+      const res = await axios.get(`http://localhost:8080/graphql?query=${query}`)
       dispatch({
         type: CONSTANTS.FETCHED_PROJECTS,
         payload: res.data.data.repositories
@@ -35,6 +34,8 @@ const ProjectList = () => {
       dispatch({ type: CONSTANTS.ERROR })
     }
   }
+  console.log(projects)
+
   return (
     <div>
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>

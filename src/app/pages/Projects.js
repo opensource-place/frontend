@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProjectList, NavBar, Footer, SearchBox } from '../components/'
+import { ProjectList, NavBar, Footer, SearchBoxx } from '../components/'
 import styled from 'styled-components'
 import { Containerx, MainContainer } from './style'
 
@@ -16,7 +16,7 @@ const Projects = () => {
       <Containerx>
         <MainContainer>
           <Search>
-            <SearchBox />
+            <SearchBoxx />
           </Search>
           <ProjectList />
         </MainContainer>
