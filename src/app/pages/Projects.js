@@ -1,13 +1,14 @@
 import React from 'react'
-import { ProjectList, NavBar, Footer, SearchBoxx } from '../components/'
-import styled from 'styled-components'
-import { Containerx, MainContainer } from './style'
+import { NavBar, Footer, ProjectCard } from '../components/'
 
-const Search = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-`
+import { Containerx, MainContainer } from './style'
+import { SearchBox, InstantSearch, Hits } from 'react-instantsearch-dom'
+import algoliasearch from 'algoliasearch/lite'
+
+const searchClient = algoliasearch(
+  process.env.REACT_APP_ALGOLIA_KEY_ONE,
+  process.env.REACT_APP_ALGOLIA_KEY_TWO
+)
 
 const Projects = () => {
   return (
@@ -15,10 +16,10 @@ const Projects = () => {
       <NavBar />
       <Containerx>
         <MainContainer>
-          <Search>
-            <SearchBoxx />
-          </Search>
-          <ProjectList />
+          <InstantSearch indexName="repository" searchClient={searchClient}>
+            <SearchBox />
+            <Hits hitComponent={ProjectCard}></Hits>
+          </InstantSearch>
         </MainContainer>
       </Containerx>
       <Footer />
