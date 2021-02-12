@@ -11,7 +11,11 @@ const Search = styled.div`
   border: 1px solid black;
   margin: 0 48px 0 0;
 `
-const searchClient = algoliasearch('J3QJG4NGK8', '183866f0a1fd2f4bcb439b652550151c')
+
+const searchClient = algoliasearch(
+  process.env.REACT_APP_ALGOLIA_KEY_ONE,
+  process.env.REACT_APP_ALGOLIA_KEY_TWO
+)
 
 const SearchBoxx = () => {
   return (
