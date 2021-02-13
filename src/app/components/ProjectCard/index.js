@@ -83,7 +83,7 @@ const ProjectCard = ({ hit }) => {
             color="#fff"
             height="36px"
             width="160px"
-            radius="15px"
+            radius="8px"
           >
             Details
           </StyledButton>
