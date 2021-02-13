@@ -20,9 +20,8 @@ const searchClient = algoliasearch(
 const SearchBoxx = () => {
   return (
     <Search>
-      <InstantSearch indexName="issues" searchClient={searchClient}>
+      <InstantSearch indexName="repository" searchClient={searchClient}>
         <SearchBox />
-        <Hits hitComponent={({ hit }) => JSON.stringify(hit, null, 2)} />
       </InstantSearch>
     </Search>
   )

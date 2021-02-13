@@ -4,34 +4,27 @@ import { Container, Text, TopDiv, BottomDiv } from './style'
 import { StyledButton, Progressbar } from '../index'
 import { ResponsiveBar } from '@nivo/bar'
 
-const ProjectCard = ({ repository }) => {
-  const data = [
-    {
-      JavaScript: 153,
-      HTML: 31,
-      CSS: 147,
-      Python: 18,
-      Java: 109
-    }
-  ]
-  const path = `/project${repository.pathname}`
+const ProjectCard = ({ hit }) => {
+  console.log(hit)
+  const data = [hit.languages]
+  const path = `/project${hit.pathname}`
   const pathx = path.split('/')
   return (
     <Container>
       <TopDiv>
-        <Progressbar issues={repository.issues} />
+        <Progressbar issues={hit.issues} />
         <Text>{pathx[3]}</Text>
       </TopDiv>
       <ResponsiveBar
         data={data}
-        keys={['JavaScript', 'HTML', 'CSS', 'Python', 'Java']}
+        keys={Object.keys(hit.languages)}
         margin={{ top: 50, right: 60, bottom: 50, left: 60 }}
         innerPadding={6}
         padding={0.0}
         groupMode="grouped"
         valueScale={{ type: 'symlog' }}
         indexScale={{ type: 'band', round: true }}
-        colors={{ scheme: 'green_blue' }}
+        colors={{ scheme: 'category10' }}
         defs={[
           {
             id: 'dots',
