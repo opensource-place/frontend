@@ -2,5 +2,7 @@ import Star from './icons/star.svg'
 import Fork from './icons/fork.svg'
 import View from './icons/view.svg'
 import IssuesWarning from './issues.svg'
+import front from './front.svg'
+import back from './back.svg'
 
-export { Star, Fork, View, IssuesWarning }
+export { Star, Fork, View, IssuesWarning, back, front }

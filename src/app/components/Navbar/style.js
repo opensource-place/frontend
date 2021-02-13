@@ -6,8 +6,6 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   border-radius: 15px;
-  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%),
-    rgba(178, 255, 241, 0.3);
   position: fixed;
   bottom: 0;
 `
@@ -45,7 +43,7 @@ const Menus = styled.div`
 `
 const NavItem = styled.div`
   margin-left: 10px;
-  color: "#1FB79B" !important;
+  color: '#1FB79B' !important;
 `
 const NavTitle = styled.div`
   margin-left: 10px;
@@ -53,12 +51,4 @@ const NavTitle = styled.div`
   color: #1fb79b;
 `
 
-export {
-  Container,
-  Wrapper,
-  ItemsWrapper,
-  LogoAndText,
-  Menus,
-  NavItem,
-  NavTitle
-}
+export { Container, Wrapper, ItemsWrapper, LogoAndText, Menus, NavItem, NavTitle }

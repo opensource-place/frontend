@@ -1,126 +1,87 @@
-import React, { useEffect } from 'react'
-import { Footer, NavBar, StyledButton, ProjectCard } from '../components'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import Example from '../assets/example.svg'
-import axios from 'axios'
-import { useDispatch, useSelector } from 'react-redux'
-import {
-  HeaderUp,
-  DarkenBackground,
-  AddSomeMargin,
-  Invite,
-  Center,
-  Description,
-  Container
-} from './style'
-import CONSTANTS from '../redux/actions'
+import { Footer, NavBar, StyledButton } from '../components'
+import { Center, Container } from './style'
+import styled from 'styled-components'
+import { front } from '../assets'
+
+const Header = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1100px;
+  height: 800px;
+`
+const HeaderRight = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 600px;
+  margin-left: 100px;
+`
+const HeaderLeft = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  height: 600px;
+`
+const HeroTitle = styled.h1`
+  font-size: 56px;
+  font-weight: 700;
+  color: #222;
+`
+const HeroTitleContent = styled.p`
+  font-size: 20px;
+  line-height: 1.4;
+  color: #555;
+`
+const ButtonLeft = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  width: 430px;
+`
 
 const LandingPage = () => {
-  const { projects } = useSelector((state) => state.projects)
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dataFetch()
-  }, [])
-
-  const dataFetch = async () => {
-    try {
-      const query = `{
-        repositories {
-          pathname
-          issues {
-            title
-          }
-        }
-      }`
-      dispatch({ type: CONSTANTS.FETHING_PROJECTS })
-      const res = await axios.get(`http://localhost:8080/graphql?query=${query}`)
-      dispatch({
-        type: CONSTANTS.FETCHED_PROJECTS,
-        payload: res.data.data.repositories
-      })
-    } catch (error) {
-      dispatch({ type: CONSTANTS.ERROR })
-    }
-  }
   return (
-    <Container>
-      <NavBar />
-      <HeaderUp>
-        <DarkenBackground>
-          <AddSomeMargin>
-            <h2 style={{ color: '#444', fontWeight: 'bold' }}>
-              The platform includes open source projects. You can list all published open-source
-              projects and also add your project on Github to the platform and your projects make
-              open source!
-            </h2>
-            <Invite>
-              <Center>
+    <>
+      <Container>
+        <NavBar />
+        <Center>
+          <Header>
+            <HeaderLeft>
+              <HeroTitle>A project platform for the worlds open source supports</HeroTitle>
+              <HeroTitleContent>
+                The platform includes open source projects. You can list all published open-source
+                projects and also add your project on Github to the platform and your projects make
+                open source!
+              </HeroTitleContent>
+              <ButtonLeft>
                 <Link to="/start">
-                  <a href="https://github.com/FurkanPortakal/opensourceadam">
-                    <StyledButton
-                      primary
-                      border="none"
-                      color="white"
-                      fontWeight="bold"
-                      padding="1.5rem"
-                      height="10px"
-                    >
-                      Feel free to contribute!
-                    </StyledButton>
-                  </a>
+                  <StyledButton
+                    landing
+                    fontSize="18px"
+                    border="0px"
+                    color="#000"
+                    height="44px"
+                    width="160px"
+                    radius="15px"
+                  >
+                    Add Project
+                  </StyledButton>
                 </Link>
-              </Center>
-            </Invite>
-          </AddSomeMargin>
-        </DarkenBackground>
-      </HeaderUp>
-      <Center>
-        {projects.map((data, index) => (
-          <div key={index}>
-            <ProjectCard repository={data} />
-          </div>
-        ))}
-      </Center>
-      <div style={{ marginRight: 480, marginLeft: 480 }}>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'flex-start',
-            justifyContent: 'flex-start'
-          }}
-        >
-          <Description>
-            <img width="200" height="200" src={Example} />
-            <p style={{ color: 'white' }}>
-              Irure ad ipsum fugiat nisi ullamco ipsum ullamco anim non fugiat. Consectetur eu
-              veniam sint esse commodo exercitation esse. Ex elit aliqua aliquip consequat eiusmod
-              fugiat veniam labore id. Dolore eu voluptate Lorem eiusmod ex aliquip incididunt.
-              Laborum enim adipisicing do anim esse excepteur.
-            </p>
-          </Description>
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'flex-start',
-            justifyContent: 'flex-end'
-          }}
-        >
-          <Description>
-            <p style={{ color: 'white' }}>
-              Irure ad ipsum fugiat nisi ullamco ipsum ullamco anim non fugiat. Consectetur eu
-              veniam sint esse commodo exercitation esse. Ex elit aliqua aliquip consequat eiusmod
-              fugiat veniam labore id. Dolore eu voluptate Lorem eiusmod ex aliquip incididunt.
-              Laborum enim adipisicing do anim esse excepteur.
-            </p>
-            <img width="200" height="200" src={Example} />
-          </Description>
-        </div>
-      </div>
-
-      <Footer />
-    </Container>
+              </ButtonLeft>
+            </HeaderLeft>
+            <HeaderRight>
+              <img width="auto" height="500" src={front} />
+            </HeaderRight>
+          </Header>
+        </Center>
+        <Footer />
+      </Container>
+    </>
   )
 }
 

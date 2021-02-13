@@ -1,0 +1,25 @@
+.ais-InstantSearch {
+    display: flex;
+    width: 1440px;
+}
+
+
+.right-panel {
+    width: 800px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.ais-Hits-item::marker {
+  list-style-type: none;
+}
+.left-panel {
+  width: 480px;
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
