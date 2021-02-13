@@ -55,7 +55,7 @@ const CustomButton = styled.button`
   color: #fff;
   transition: all 0.15s;
   &:hover {
-    background-color: #3d8069;
+    background-color: #54ac8d;
   }
 `
 

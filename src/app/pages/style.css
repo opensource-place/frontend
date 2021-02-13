@@ -1,25 +1,120 @@
 .ais-InstantSearch {
-    display: flex;
-    width: 1440px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
-
 .right-panel {
-    width: 800px;
-    display: flex;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
   align-items: center;
+}
+
+.ais-Hits-list {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
   flex-wrap: wrap;
 }
 
+.ais-SearchBox-input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
-.ais-Hits-item::marker {
+.ais-SearchBox-submit {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #63d0ab;
+  transition: all 0.18s;
+}
+.ais-SearchBox-submit:hover {
+  background-color: #54ac8d;
+}
+.ais-SearchBox-submitIcon {
+  width: 25px;
+  height: 15px;
+  font-weight: 600;
+  fill: #fff;
+}
+
+.ais-SearchBox-reset {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #63d0ab;
+  transition: all 0.18s;
+}
+.ais-SearchBox-reset:hover {
+  background-color: #54ac8d;
+}
+.ais-Pagination-list {
   list-style-type: none;
 }
+.ais-Pagination-item {
+  font-size: 18px;
+  margin-right: 8px;
+  border-radius: 8px;
+  background-color: #54ac8d;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+}
+.ais-Pagination-item--disabled {
+  opacity: 0.65;
+}
+.ais-Pagination-link {
+  color: white;
+}
+.ais-Pagination-link:hover {
+  color: rgb(243, 243, 243);
+}
+.ais-Pagination-item--selected {
+  background-color: #63cfab;
+}
+.ais-SearchBox-resetIcon {
+  width: 25px;
+  height: 15px;
+  font-weight: 600;
+  fill: #fff;
+}
+
+.ais-Pagination-list {
+  display: flex;
+  flex-direction: row;
+}
 .left-panel {
-  width: 480px;
-    display: flex;
-    flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 2rem;
+}
+.refimentList {
+  margin-top: 15px;
+}
+.ais-RefinementList-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.ais-RefinementList-labelText {
+  margin-left: 1rem;
+
+  color: #63cfab;
+}
+.ais-RefinementList-item {
+  margin-bottom: 1rem;
+}
+.ais-RefinementList-count {
+  margin-left: 1rem;
+  padding: 0.3rem 0.6rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 8px;
+  background-color: #63cfab;
 }
