@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Footer, NavBar, StyledButton } from '../components'
+import { Footer, NavBar } from '../components'
 import { Center, Container } from './style'
 import styled from 'styled-components'
 import { front } from '../assets'
@@ -32,16 +32,31 @@ const HeroTitle = styled.h1`
   font-size: 56px;
   font-weight: 700;
   color: #222;
+  margin-bottom: 15px;
 `
 const HeroTitleContent = styled.p`
   font-size: 20px;
   line-height: 1.4;
   color: #555;
+  margin-bottom: 30px;
 `
 const ButtonLeft = styled.div`
   display: flex;
   justify-content: flex-start;
   width: 430px;
+`
+const CustomButton = styled.button`
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  font-size: 24px;
+  background-color: #63d0ab;
+  color: #fff;
+  transition: all 0.15s;
+  &:hover {
+    background-color: #3d8069;
+  }
 `
 
 const LandingPage = () => {
@@ -60,17 +75,7 @@ const LandingPage = () => {
               </HeroTitleContent>
               <ButtonLeft>
                 <Link to="/start">
-                  <StyledButton
-                    landing
-                    fontSize="18px"
-                    border="0px"
-                    color="#000"
-                    height="44px"
-                    width="160px"
-                    radius="15px"
-                  >
-                    Add Project
-                  </StyledButton>
+                  <CustomButton>Add Project</CustomButton>
                 </Link>
               </ButtonLeft>
             </HeaderLeft>
