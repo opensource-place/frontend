@@ -1,9 +1,10 @@
+/*eslint-disable*/
 import React from 'react'
 import { NavBar, Footer, ProjectCard } from '../components/'
 
-import { Containerx, MainContainer } from './style'
-import { SearchBox, InstantSearch, Hits } from 'react-instantsearch-dom'
+import { SearchBox, InstantSearch, Hits, RefinementList } from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch/lite'
+import './style.css'
 
 const searchClient = algoliasearch(
   process.env.REACT_APP_ALGOLIA_KEY_ONE,
@@ -14,14 +15,17 @@ const Projects = () => {
   return (
     <>
       <NavBar />
-      <Containerx>
-        <MainContainer>
-          <InstantSearch indexName="repository" searchClient={searchClient}>
+      <div className="ais-InstantSearch">
+        <InstantSearch indexName="repository" searchClient={searchClient}>
+          <div className="left-panel">
             <SearchBox />
-            <Hits hitComponent={ProjectCard}></Hits>
-          </InstantSearch>
-        </MainContainer>
-      </Containerx>
+            <RefinementList attribute="brand" />
+          </div>
+          <div className="right-panel">
+            <Hits className="ais-Hits-list" hitComponent={ProjectCard}></Hits>
+          </div>
+        </InstantSearch>
+      </div>
       <Footer />
     </>
   )

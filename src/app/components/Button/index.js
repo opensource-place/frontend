@@ -31,6 +31,8 @@ const StyledButton = styled.button`
       ? '#008622'
       : props.deneme
       ? '#1F8874'
+      : props.landing
+      ? '#63D0AB'
       : props.primary
       ? '#1F8874'
       : '#00000'};
