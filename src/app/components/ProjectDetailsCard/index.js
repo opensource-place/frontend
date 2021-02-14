@@ -74,10 +74,10 @@ const ProjectDetail = () => {
      }
     }`
 
-    const res = await axios.get(`http://localhost:8080/graphql?query=${query}`)
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/graphql?query=${query}`)
     setIssues(res.data.data.issues)
 
-    const repox = await axios.get(`http://localhost:8080/graphql?query=${repos}`)
+    const repox = await axios.get(`${process.env.REACT_APP_API_URL}/graphql?query=${repos}`)
     setRepo(repox.data.data.repository)
   }
 
