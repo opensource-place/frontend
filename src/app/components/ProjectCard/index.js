@@ -5,7 +5,6 @@ import { StyledButton, Progressbar } from '../index'
 import { ResponsiveBar } from '@nivo/bar'
 
 const ProjectCard = ({ hit }) => {
-  console.log(hit)
   const data = [hit.languages]
   const path = `/project${hit.pathname}`
   const pathx = path.split('/')

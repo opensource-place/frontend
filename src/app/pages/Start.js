@@ -80,20 +80,23 @@ const Input = styled.input`
 
 const Start = () => {
   const [issue, setIssue] = useState('')
+  const [loading, setLoading] = useState(false)
   // const [getDBStatus, setDBStatus] = useState(false)
   // const [getDBStatusMSG, setDBStatusMSG] = useState('')
 
   const addIssue = async (e) => {
-    e.preventDefault()
-
-    const url = 'http://localhost:8080'
-
-    const res = await axios.post(`${url}/repository`, {
-      url: issue
-    })
-
-    // setDBStatus(res.data.result)
-    // setDBStatusMSG(res.data.msg)
+    const url = process.env.REACT_APP_API_URL
+    setLoading(true)
+    const res = await axios
+      .post(`${url}/repository`, {
+        url: issue
+      })
+      .catch((err) => {
+        setIssue('')
+        setLoading(false)
+      })
+    setIssue('')
+    setLoading(false)
   }
 
   return (
@@ -113,18 +116,21 @@ const Start = () => {
               </HeroTitleContent>
             </ContentTop>
             <ContentBottom>
-              <div stlye={{ width: '3rem' }}>
-                <Input
-                  type="text"
-                  stlye={{ color: 'red' }}
-                  onChange={(e) => setIssue(e.target.value)}
-                  placeholder="GitHub Repository URL (opensourceadam-place/wiki)"
-                  name="note"
-                />
-              </div>
-              <CustomButton onClick={addIssue} type="Submit">
-                Add Project
-              </CustomButton>
+              {loading ? (
+                <p>Loading</p>
+              ) : (
+                <div>
+                  <Input
+                    type="text"
+                    onChange={(e) => setIssue(e.target.value)}
+                    value={issue}
+                    placeholder="GitHub Repository URL (opensourceadam-place/wiki)"
+                  />
+                  <CustomButton onClick={addIssue} type="Submit">
+                    Add Project
+                  </CustomButton>
+                </div>
+              )}
             </ContentBottom>
           </Background>
         </MainContainer>

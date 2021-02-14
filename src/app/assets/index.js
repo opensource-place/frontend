@@ -9,4 +9,4 @@ import details from './details.svg'
 import issue from './issue.svg'
 import search from './search.svg'
 
-export { Star, Fork, View, IssuesWarning, back, front,landing,details,search,issue }
+export { Star, Fork, View, IssuesWarning, back, front, landing, details, search, issue }
