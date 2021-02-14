@@ -20,11 +20,11 @@ const ProjectCard = ({ hit }) => {
         keys={Object.keys(hit.languages)}
         margin={{ top: 50, right: 60, bottom: 50, left: 60 }}
         innerPadding={6}
-        padding={0.0}
+        padding={0.3}
         groupMode="grouped"
         valueScale={{ type: 'symlog' }}
         indexScale={{ type: 'band', round: true }}
-        colors={{ scheme: 'category10' }}
+        colors={{ scheme: 'set3' }}
         defs={[
           {
             id: 'dots',
