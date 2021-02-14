@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom'
 import { Footer, NavBar } from '../components'
 import { Center, Container } from './style'
 import styled from 'styled-components'
-import { front } from '../assets'
+import { landing, front, details, search, issue } from '../assets'
+import './style.css'
 
 const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 1100px;
-  height: 800px;
+  height: 80vh;
 `
 const HeaderRight = styled.div`
   display: flex;
@@ -58,6 +59,55 @@ const CustomButton = styled.button`
     background-color: #54ac8d;
   }
 `
+const Subdescription = styled.div`
+  display: flex;
+  padding: 5rem 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  background: -webkit-linear-gradient(bottom, #ffffff, #63d0ac);
+  background: -moz-linear-gradient(bottom, #ffffff, #63d0ac);
+  background: linear-gradient(to top, #ffffff, #63d0ac);
+`
+const SubTitle = styled.h1`
+  font-size: 48px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 60%);
+`
+const DescprojectcardRight = styled.div`
+  display: flex;
+    justify-content:center;
+    align-items:center;
+    width 100%;
+    margin-left: 2rem;
+`
+const DescprojectcardLeft = styled.div`
+  display: flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    width 100%;
+    `
+const Descprojectcard = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin-top: 4rem;
+`
+const Soon = styled.div`
+  display: flex;
+  padding-top: 5rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 20vh 0;
+  width: 100%;
+  height: 100%;
+`
 
 const LandingPage = () => {
   return (
@@ -84,6 +134,50 @@ const LandingPage = () => {
             </HeaderRight>
           </Header>
         </Center>
+        <img src={landing} style={{ transform: 'rotate(180deg)' }} />
+        <Subdescription>
+          <SubTitle>Projects Easily Contribute</SubTitle>
+          <Descprojectcard>
+            <DescprojectcardLeft>
+              <img src={details} />
+            </DescprojectcardLeft>
+            <DescprojectcardRight>
+              <HeroTitleContent>
+                Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+                industries for previewing layouts and visual mockups.
+              </HeroTitleContent>
+            </DescprojectcardRight>
+          </Descprojectcard>
+          <Descprojectcard>
+            <DescprojectcardLeft>
+              Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+              industries for previewing layouts and visual mockups.
+            </DescprojectcardLeft>
+            <DescprojectcardRight>
+              <HeroTitleContent>
+                <img src={issue} />
+              </HeroTitleContent>
+            </DescprojectcardRight>
+          </Descprojectcard>
+          <Descprojectcard>
+            <DescprojectcardLeft>
+              <img src={search} width="auto" height="250" />
+            </DescprojectcardLeft>
+            <DescprojectcardRight>
+              <HeroTitleContent>
+                Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+                industries for previewing layouts and visual mockups.
+              </HeroTitleContent>
+            </DescprojectcardRight>
+          </Descprojectcard>
+        </Subdescription>
+        <Soon>
+          <HeroTitle>Lets fly to open source place</HeroTitle>
+          <HeroTitleContent>For we, open source is lifestyle.</HeroTitleContent>
+          <Link to="/projects">
+            <CustomButton>Lets fly 🛸</CustomButton>
+          </Link>
+        </Soon>
         <Footer />
       </Container>
     </>
