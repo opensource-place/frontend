@@ -86,6 +86,7 @@ export const Containerx = styled.div`
   min-height: 100vh;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 50px;
 
   @media screen and (min-width: 1024px) {
     width: 100%;

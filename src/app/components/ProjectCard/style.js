@@ -18,10 +18,11 @@ const Container = styled.div`
   }
   display: flex;
   flex-direction: column;
-  border: 1px solid #4b7d74;
+  border: 2px solid #4b7d74;
   border-radius: 30px;
   justify-content: space-between;
   margin: 2rem 0.6rem;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
 `
 
 const Text = styled.h1`

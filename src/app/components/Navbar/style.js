@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #fff;
   @media screen and (min-width: 1024px) {
     width: 100%;
   }
@@ -35,6 +35,8 @@ const ItemsWrapper = styled.div`
 const LogoAndText = styled.div`
   display: flex;
   align-items: center;
+  font-weight: 600;
+  font-size: 24px;
 `
 const Menus = styled.div`
   margin-right: 5px;
@@ -42,8 +44,9 @@ const Menus = styled.div`
   margin-left: auto;
 `
 const NavItem = styled.div`
-  margin-left: 10px;
+  margin-left: 25px;
   color: '#1FB79B' !important;
+  font-weight: 600;
 `
 const NavTitle = styled.div`
   margin-left: 10px;

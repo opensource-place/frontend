@@ -4,9 +4,8 @@ import styled from 'styled-components'
 import { Wrapper, ItemsWrapper, LogoAndText, Menus, NavItem, NavTitle } from './style'
 
 const Navbar = styled.nav`
-  padding: 12px;
+  padding: 0.5rem 10%;
   width: 100%;
-  box-shadow: 4px 4px 11px rgba(0, 0, 0, 0.15);
 `
 
 export const NavBar = () => (
