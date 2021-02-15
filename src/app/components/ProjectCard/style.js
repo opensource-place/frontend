@@ -22,7 +22,11 @@ const Container = styled.div`
   border-radius: 30px;
   justify-content: space-between;
   margin: 2rem 0.6rem;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+  transition: all 0.18s ease;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.25);
+  &:hover {
+    transform: translateY(-10px);
+  }
 `
 
 const Text = styled.h1`

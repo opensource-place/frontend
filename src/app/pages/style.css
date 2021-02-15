@@ -100,6 +100,7 @@
 .ais-RefinementList-list {
   list-style-type: none;
   padding-left: 0;
+  width: 70%;
 }
 
 .ais-RefinementList-labelText {
@@ -109,13 +110,33 @@
 }
 .ais-RefinementList-item {
   margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
+.ais-RefinementList-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ais-RefinementList-labelText:hover {
+  color: #50a78a;
+  cursor: pointer;
+}
+.ais-RefinementList-labelText {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .ais-RefinementList-count {
-  margin-left: 1rem;
-  padding: 0.3rem 0.6rem;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  margin-left: auto;
   font-weight: 600;
   color: white;
   border-radius: 8px;
   background-color: #63cfab;
 }
-
