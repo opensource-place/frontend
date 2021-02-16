@@ -70,6 +70,13 @@ const ProjectCard = ({ hit }) => {
         labelSkipHeight={12}
         labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
         animate={true}
+        tooltip={function ({ id, value }) {
+          return (
+            <strong>
+              {id} : {value}
+            </strong>
+          )
+        }}
         motionStiffness={90}
         motionDamping={15}
       />
