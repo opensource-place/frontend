@@ -36,7 +36,12 @@ const Projects = () => {
                   <p style={{ opacity: 0.25, fontWeight: 700, letterSpacing: '1px' }}>
                     ~ Search by labels name ~
                   </p>
-                  <RefinementList attribute="issues.labels.name" />
+                  <RefinementList
+                    attribute="issues.labels.name"
+                    limit={5}
+                    showMoreLimit={10}
+                    showMore={true}
+                  />
                 </div>
                 <Configure hitsPerPage={9} />
               </div>
