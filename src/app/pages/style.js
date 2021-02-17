@@ -83,10 +83,9 @@ export const MainContainer = styled.div`
 
 export const Containerx = styled.div`
   display: flex;
-  min-height: 100vh;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 50px;
+  margin-top: 3rem;
 
   @media screen and (min-width: 1024px) {
     width: 100%;
