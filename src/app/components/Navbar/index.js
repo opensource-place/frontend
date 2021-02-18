@@ -15,7 +15,7 @@ export const NavBar = () => (
         <Link to="/">
           <LogoAndText>
             <img width="35px" src="/logo.png" alt="Our Logo" />
-            <NavTitle>OpenSource.place</NavTitle>
+            <NavTitle>Open Source Place</NavTitle>
           </LogoAndText>
         </Link>
         <Menus id="mobileMenu">
