@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   justify-content: space-between;
-  min-height: 100vh;
 `
 export const HeaderUp = styled.div`
   display: flex;
