@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import React, { useState } from 'react'
 import { NavBar } from '../components'
 import axios from 'axios'
@@ -95,11 +94,12 @@ const Start = () => {
   const addIssue = async (e) => {
     const url = process.env.REACT_APP_API_URL
     setLoading(true)
-    const res = await axios
+    await axios
       .post(`${url}/repository`, {
         url: issue
       })
       .catch((err) => {
+        console.log(err)
         setIssue('')
         setLoading(false)
       })
@@ -131,11 +131,13 @@ const Start = () => {
               </HeroTitleContentRight>
             </HeroTitleContentContainer>
             <ContentBottom>
-              {loading ? (
+              {loading
+                ? (
                 <ContentBottom>
                   <p>Loading</p>
                 </ContentBottom>
-              ) : (
+                  )
+                : (
                 <ContentBottom>
                   <Input
                     type="text"
@@ -147,7 +149,7 @@ const Start = () => {
                     Add Project
                   </CustomButton>
                 </ContentBottom>
-              )}
+                  )}
             </ContentBottom>
           </Background>
         </MainContainer>

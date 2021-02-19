@@ -1,13 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import axios from 'axios'
-import {
-  Projects,
-  LandingPage,
-  Start,
-  Login,
-  ProjectDetail
-} from './pages'
+import { Projects, LandingPage, Start, Login, ProjectDetail, Contact } from './pages'
 import { Provider } from 'react-redux'
 import storex from './redux/store'
 
@@ -21,10 +15,8 @@ const Router = () => {
         <Route path="/projects" component={Projects} />
         <Route path="/start" component={Start} />
         <Route path="/login" component={Login} />
-        <Route
-          path="/project/:projectname/:reponame"
-          component={ProjectDetail}
-        />
+        <Route path="/contact" component={Contact} />
+        <Route path="/project/:projectname/:reponame" component={ProjectDetail} />
       </BrowserRouter>
     </Provider>
   )

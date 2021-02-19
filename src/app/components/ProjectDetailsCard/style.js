@@ -6,14 +6,6 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  @media screen and (min-width: 1024px) {
-  }
-
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 320px) {
-  }
 `
 
 const Details = styled.div`
@@ -24,15 +16,16 @@ const Details = styled.div`
   border-radius: 30px;
   color: white;
   padding: 1rem;
-  margin: 0 0 79px;
-  width: 540px;
-  height: 190px;
-  border: 2px solid rgba(60, 176, 155, 10%);
+  margin: 0 0 5rem;
+  width: 40%;
+  height: 12rem;
+  border: 2px solid rgba(60, 176, 155, 20%);
 `
 const Issues = styled.div`
   display: flex;
+  width: 80%;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
 `
@@ -42,7 +35,6 @@ const IssuesFull = styled.div`
   justify-content: flex-start;
   align-items: start;
   padding: 20px;
-  max-width: 640px;
   margin-right: 10px;
 `
 const IssuesDetail = styled.div`
@@ -50,10 +42,11 @@ const IssuesDetail = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 540px;
+  flex-wrap: wrap;
+  width: 40%;
   margin: 5.5px;
   border-radius: 30px;
-  border: 2px solid rgba(60, 176, 155, 10%);
+  border: 2px solid rgba(60, 176, 155, 20%);
   padding: 0 1rem;
 `
 
@@ -98,16 +91,19 @@ const Language = styled.h6`
 
 const BottomDiv = styled.div`
   display: flex;
-  margin-top: 24px;
-  margin-bottom: 48px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 `
 const Readme = styled.div`
-  padding: 20px;
-  max-width: 640px;
-  margin-right: 10px;
-  border: 2px solid rgba(60, 176, 155, 10%);
+  padding: 1rem;
+  width: 40%;
+  border: 2px solid rgba(60, 176, 155, 20%);
   border-radius: 30px;
   font-size: 12px;
+  margin: 0.2rem;
+  height: 100%;
 `
 const TextB = styled.h4`
   display: flex;
@@ -120,8 +116,9 @@ const TextB = styled.h4`
 const Text = styled.h4`
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: medium !important;
   color: #000;
 `

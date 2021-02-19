@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import React from 'react'
 import { NavBar, Footer, ProjectCard } from '../components/'
 import { MainContainer, Containerx } from './style'

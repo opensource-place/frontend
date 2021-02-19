@@ -65,7 +65,6 @@ const Subdescription = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-
   width: 100%;
   height: 100%;
   background: #ffffff;
@@ -78,11 +77,17 @@ const SubTitle = styled.h1`
   font-weight: 700;
   color: rgba(0, 0, 0, 60%);
 `
+const Descprojectcard = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin-top: 4rem;
+`
 const DescprojectcardRight = styled.div`
   display: flex;
     justify-content:center;
     align-items:center;
-    width 100%;
+    width 50%;
     margin-left: 2rem;
 `
 const DescprojectcardLeft = styled.div`
@@ -90,14 +95,8 @@ const DescprojectcardLeft = styled.div`
     justify-content:center;
     align-items:center;
     text-align:center;
-    width 100%;
+    width 50%;
     `
-const Descprojectcard = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  margin-top: 4rem;
-`
 const Soon = styled.div`
   display: flex;
   padding-top: 5rem;

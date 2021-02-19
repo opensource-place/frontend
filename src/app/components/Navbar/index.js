@@ -34,6 +34,11 @@ export const NavBar = () => (
               Documents
             </a>
           </NavItem>
+          <NavItem>
+            <Link to="/contact" style={{ color: '#1FB79B' }}>
+              Contact
+            </Link>
+          </NavItem>
         </Menus>
       </ItemsWrapper>
     </Navbar>

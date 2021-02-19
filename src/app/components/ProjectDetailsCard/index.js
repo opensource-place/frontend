@@ -149,13 +149,14 @@ const ProjectDetail = () => {
           <Markdown>{content}</Markdown>
         </Readme>
         <Readme>
+          <TextB>ISSUES</TextB>
           {issues.map((item, i) => (
             <IssuesFull key={i}>
               <IssuesDetailLeft>
                 <img
                   src={IssuesWarning}
                   alt="warning"
-                  style={{ marginBottom: '9px', marginRight: '10px' }}
+                  style={{ marginBottom: '0.5rem', marginRight: '0.6rem' }}
                 />
               </IssuesDetailLeft>
               <IssuesDetailRigth>

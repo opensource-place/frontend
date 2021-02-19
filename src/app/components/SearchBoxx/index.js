@@ -1,8 +1,7 @@
-/*eslint-disable*/
+import React from 'react'
 import styled from 'styled-components'
 import algoliasearch from 'algoliasearch/lite'
-import { SearchBox, InstantSearch, Hits } from 'react-instantsearch-dom'
-import { ProjectCard } from '../../components'
+import { SearchBox, InstantSearch } from 'react-instantsearch-dom'
 
 const Search = styled.div`
   display: flex;
