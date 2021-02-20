@@ -1,3 +1,4 @@
+/* eslint-disable*/
 import React, { useState } from 'react'
 import { NavBar } from '../components'
 import axios from 'axios'
@@ -28,6 +29,7 @@ const HeroTitle = styled.h1`
     rgba(84, 172, 152, 1) 73%,
     rgba(99, 208, 171, 1) 100%
   );
+  font-weight: 600;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
@@ -90,16 +92,18 @@ const HeroTitleContentLeft = styled.div`
 const Start = () => {
   const [issue, setIssue] = useState('')
   const [loading, setLoading] = useState(false)
+  const [errors, setErrors] = useState(null)
 
   const addIssue = async (e) => {
     const url = process.env.REACT_APP_API_URL
+    setErrors(null)
     setLoading(true)
     await axios
       .post(`${url}/repository`, {
         url: issue
       })
       .catch((err) => {
-        console.log(err)
+        setErrors('Please fill the empty fields or fill with a valid URL')
         setIssue('')
         setLoading(false)
       })
@@ -131,13 +135,11 @@ const Start = () => {
               </HeroTitleContentRight>
             </HeroTitleContentContainer>
             <ContentBottom>
-              {loading
-                ? (
+              {loading ? (
                 <ContentBottom>
                   <p>Loading</p>
                 </ContentBottom>
-                  )
-                : (
+              ) : (
                 <ContentBottom>
                   <Input
                     type="text"
@@ -149,7 +151,23 @@ const Start = () => {
                     Add Project
                   </CustomButton>
                 </ContentBottom>
-                  )}
+              )}
+              {errors ? (
+                <p
+                  style={{
+                    padding: '1rem',
+                    backgroundColor: '#FFF3CD',
+                    color: '#CAB064',
+                    borderRadius: '8px',
+                    fontWeight: '600',
+                    marginTop: '12px'
+                  }}
+                >
+                  {errors}
+                </p>
+              ) : (
+                ''
+              )}
             </ContentBottom>
           </Background>
         </MainContainer>
