@@ -8,28 +8,37 @@ import './style.css'
 
 const Header = styled.div`
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 1100px;
+  width: 68%;
   height: 80vh;
 `
 const HeaderRight = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
-  height: 600px;
-  margin-left: 100px;
+  width: 50%;
+  min-height: 50%;
 `
 const HeaderLeft = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  width: 500px;
-  height: 600px;
+  width: 40%;
+  margin-left: 2rem;
+  min-height: 50%;
 `
 const HeroTitle = styled.h1`
+  font-size: 56px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+`
+const ButtomTitle = styled.h1`
+  text-align: center;
   font-size: 56px;
   font-weight: 700;
   color: #222;
@@ -65,6 +74,7 @@ const Subdescription = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
+  margin-top: -2px;
   width: 100%;
   height: 100%;
   background: #ffffff;
@@ -171,7 +181,7 @@ const LandingPage = () => {
           </Descprojectcard>
         </Subdescription>
         <Soon>
-          <HeroTitle>Lets fly to open source place</HeroTitle>
+          <ButtomTitle>Lets fly to open source place</ButtomTitle>
           <HeroTitleContent>For we, open source is lifestyle.</HeroTitleContent>
           <Link to="/projects">
             <CustomButton>Lets fly 🛸</CustomButton>

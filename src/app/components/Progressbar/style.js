@@ -18,12 +18,16 @@ const Container = styled.div`
 `
 
 const Text = styled.div`
+  height: 70%;
+  width: 70%;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 12px;
-  margin-top: -5px;
+  font-size: 0.75rem;
   color: #333333;
+  background: #f2f2f2;
+  border-radius: 100%;
 `
 const TopDiv = styled.div``
 const LengthText = styled.strong`

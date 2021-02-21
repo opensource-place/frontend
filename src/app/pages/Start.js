@@ -1,4 +1,3 @@
-/* eslint-disable*/
 import React, { useState } from 'react'
 import { NavBar } from '../components'
 import axios from 'axios'
@@ -93,6 +92,7 @@ const Start = () => {
   const [issue, setIssue] = useState('')
   const [loading, setLoading] = useState(false)
   const [errors, setErrors] = useState(null)
+  const [succes, setSucces] = useState(null)
 
   const addIssue = async (e) => {
     const url = process.env.REACT_APP_API_URL
@@ -102,10 +102,12 @@ const Start = () => {
       .post(`${url}/repository`, {
         url: issue
       })
+      .then(setSucces(true))
       .catch((err) => {
         setErrors('Please fill the empty fields or fill with a valid URL')
         setIssue('')
         setLoading(false)
+        console.log({ ...err })
       })
     setIssue('')
     setLoading(false)
@@ -126,20 +128,21 @@ const Start = () => {
               </HeroTitleContentLeft>
               <HeroTitleContentRight>
                 <HeroTitleContent>🛸 Our recommended repository should be</HeroTitleContent>
+                <HeroTitleContent>🛸 Must have a repository readme</HeroTitleContent>
                 <HeroTitleContent>
-                  🛸 Must have a repository readme Issues should be
-                </HeroTitleContent>
-                <HeroTitleContent>
-                  🛸 opened and labeled The url of the Github repository must be added from below
+                  🛸 Issues should be opened and labeled The url of the Github repository must be
+                  added from below
                 </HeroTitleContent>
               </HeroTitleContentRight>
             </HeroTitleContentContainer>
             <ContentBottom>
-              {loading ? (
+              {loading
+                ? (
                 <ContentBottom>
                   <p>Loading</p>
                 </ContentBottom>
-              ) : (
+                  )
+                : (
                 <ContentBottom>
                   <Input
                     type="text"
@@ -151,8 +154,9 @@ const Start = () => {
                     Add Project
                   </CustomButton>
                 </ContentBottom>
-              )}
-              {errors ? (
+                  )}
+              {errors
+                ? (
                 <p
                   style={{
                     padding: '1rem',
@@ -165,9 +169,25 @@ const Start = () => {
                 >
                   {errors}
                 </p>
-              ) : (
-                ''
-              )}
+                  )
+                : succes
+                  ? (
+                <p
+                  style={{
+                    padding: '1rem',
+                    backgroundColor: '#9bd888',
+                    color: '#67bf4a',
+                    borderRadius: '8px',
+                    fontWeight: '600',
+                    marginTop: '12px'
+                  }}
+                >
+                  You can see your added project on the project page.
+                </p>
+                    )
+                  : (
+                      ''
+                    )}
             </ContentBottom>
           </Background>
         </MainContainer>
