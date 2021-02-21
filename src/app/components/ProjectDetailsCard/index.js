@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useState } from 'react'
 import {
   Container,
@@ -105,11 +106,11 @@ const ProjectDetail = () => {
           <Progressbar issues={issues} />
         </DetailsMiddle>
         <DetailsRight>
-          <Language>JavaScript</Language>
-          <DetailsRightRow>
+          {/* <Language>JavaScript</Language> */}
+          {/* <DetailsRightRow>
             <img src={View} />
             <DetailsRightText>78</DetailsRightText>
-          </DetailsRightRow>
+          </DetailsRightRow> */}
           <DetailsRightRow>
             <img src={Star} />
             <DetailsRightText>{repo.stargazers_count}</DetailsRightText>
