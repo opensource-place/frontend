@@ -87,6 +87,13 @@ const ProjectDetail = () => {
     )
     setContent(await res.data)
   }
+  // const avatar = [
+  //   repo.contributors[0].avatar_url,
+  //   repo.contributors[1].avatar_url,
+  //   repo.contributors[2].avatar_url
+  // ]
+
+  // console.log(repo.contributors[0])
 
   return (
     <Container>

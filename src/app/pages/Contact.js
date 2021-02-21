@@ -41,6 +41,28 @@ const Soon = styled.div`
   flex-direction: column;
   width: 100%;
 `
+const Button = styled.div`
+  display: flex;
+  margin: 2rem 1rem;
+`
+
+const Go = styled.a`
+  background-color: #0d0a0b;
+  background-image: linear-gradient(
+    331deg,
+    rgba(114, 137, 218, 1) 0%,
+    rgba(84, 172, 152, 1) 73%,
+    rgba(99, 208, 171, 1) 100%
+  );
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0px 1px 1px #ccc;
+`
+
 const Start = () => {
   return (
     <>
@@ -59,7 +81,11 @@ const Start = () => {
             allowTransparency="true"
             frameBorder="0"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            style={{ marginBottom: '1rem' }}
           />
+          <Button>
+            <Go href="https://findmentor.network">Find mentor&mentee</Go>
+          </Button>
         </Soon>
       </Container>
     </>

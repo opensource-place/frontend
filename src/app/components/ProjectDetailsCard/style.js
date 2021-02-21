@@ -62,7 +62,9 @@ const IssuesDetailLeft = styled.div`
   align-items: center;
 `
 
-const DetailsLeft = styled.div``
+const DetailsLeft = styled.div`
+  text-align: center;
+`
 const DetailsMiddle = styled.div`
   margin: 0 15px;
 `
