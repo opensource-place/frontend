@@ -17,7 +17,7 @@ const Details = styled.div`
   color: white;
   padding: 1rem;
   margin: 0 0 5rem;
-  width: 40%;
+  width: auto;
   height: 12rem;
   border: 2px solid rgba(60, 176, 155, 20%);
 `

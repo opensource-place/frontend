@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from 'react'
 import { NavBar } from '../components'
 import axios from 'axios'
@@ -102,7 +103,11 @@ const Start = () => {
       .post(`${url}/repository`, {
         url: issue
       })
-      .then(setSucces(true))
+      .then(() => {
+        setLoading(false)
+        window.location.reload(true)
+        setSucces(true)
+      })
       .catch((err) => {
         setErrors('Please fill the empty fields or fill with a valid URL')
         setIssue('')
@@ -136,13 +141,11 @@ const Start = () => {
               </HeroTitleContentRight>
             </HeroTitleContentContainer>
             <ContentBottom>
-              {loading
-                ? (
+              {loading ? (
                 <ContentBottom>
                   <p>Loading</p>
                 </ContentBottom>
-                  )
-                : (
+              ) : (
                 <ContentBottom>
                   <Input
                     type="text"
@@ -154,9 +157,8 @@ const Start = () => {
                     Add Project
                   </CustomButton>
                 </ContentBottom>
-                  )}
-              {errors
-                ? (
+              )}
+              {errors ? (
                 <p
                   style={{
                     padding: '1rem',
@@ -169,9 +171,7 @@ const Start = () => {
                 >
                   {errors}
                 </p>
-                  )
-                : succes
-                  ? (
+              ) : succes ? (
                 <p
                   style={{
                     padding: '1rem',
@@ -184,10 +184,9 @@ const Start = () => {
                 >
                   You can see your added project on the project page.
                 </p>
-                    )
-                  : (
-                      ''
-                    )}
+              ) : (
+                ''
+              )}
             </ContentBottom>
           </Background>
         </MainContainer>
