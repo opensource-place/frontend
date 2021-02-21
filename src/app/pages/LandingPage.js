@@ -91,22 +91,22 @@ const Descprojectcard = styled.div`
   display: flex;
   justify-content: space-between;
   width: 60%;
-  margin-top: 4rem;
+  margin-top: 8rem;
 `
 const DescprojectcardRight = styled.div`
   display: flex;
-    justify-content:center;
-    align-items:center;
-    width 50%;
-    margin-left: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  margin-left: 2rem;
 `
 const DescprojectcardLeft = styled.div`
   display: flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    width 50%;
-    `
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  width: 50%;
+`
 const Soon = styled.div`
   display: flex;
   padding-top: 5rem;
@@ -148,34 +148,34 @@ const LandingPage = () => {
           <SubTitle>Projects Easily Contribute</SubTitle>
           <Descprojectcard>
             <DescprojectcardLeft>
-              <img src={details} />
+              <img src={search} width="50%" />
             </DescprojectcardLeft>
             <DescprojectcardRight>
               <HeroTitleContent>
-                Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
-                industries for previewing layouts and visual mockups.
+                If you want to contribute to any project by your level. You need to search first,
+                take a look at projects by issue label, project language, and project name.
               </HeroTitleContent>
             </DescprojectcardRight>
           </Descprojectcard>
           <Descprojectcard>
             <DescprojectcardLeft>
-              Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
-              industries for previewing layouts and visual mockups.
+              <HeroTitleContent>
+                If you find the correct project for you. You can get more details by clicking the
+                details button. You will see readme, issues, stats of the project.
+              </HeroTitleContent>
             </DescprojectcardLeft>
             <DescprojectcardRight>
-              <HeroTitleContent>
-                <img src={issue} />
-              </HeroTitleContent>
+              <img src={details} width="100%" />
             </DescprojectcardRight>
           </Descprojectcard>
           <Descprojectcard>
             <DescprojectcardLeft>
-              <img src={search} width="auto" height="250" />
+              <img src={issue} width="100%" />
             </DescprojectcardLeft>
             <DescprojectcardRight>
               <HeroTitleContent>
-                Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
-                industries for previewing layouts and visual mockups.
+                At the finally, if you find the best issue for you. Click the issue for start to
+                solve it (redirect you to GitHub) or find another issue ⚡
               </HeroTitleContent>
             </DescprojectcardRight>
           </Descprojectcard>
