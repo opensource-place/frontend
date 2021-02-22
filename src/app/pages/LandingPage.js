@@ -133,7 +133,7 @@ const LandingPage = () => {
                 open source!
               </HeroTitleContent>
               <ButtonLeft>
-                <Link to="/start">
+                <Link to="/addproject">
                   <CustomButton>Add Project</CustomButton>
                 </Link>
               </ButtonLeft>
