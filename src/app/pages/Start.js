@@ -132,11 +132,11 @@ const Start = () => {
                 <img src={computer} width="auto" height="250" />
               </HeroTitleContentLeft>
               <HeroTitleContentRight>
-                <HeroTitleContent>🛸 Our recommended repository should be</HeroTitleContent>
-                <HeroTitleContent>🛸 Must have a repository readme</HeroTitleContent>
+                <HeroTitleContent>👇 Our recommended repository should be</HeroTitleContent>
+                <HeroTitleContent>🛸 Must have a repository README.md</HeroTitleContent>
+                <HeroTitleContent>🛸 Issues should be opened and labeled</HeroTitleContent>
                 <HeroTitleContent>
-                  🛸 Issues should be opened and labeled The url of the Github repository must be
-                  added from below
+                  🛸The url of the Github repository must be added from below
                 </HeroTitleContent>
               </HeroTitleContentRight>
             </HeroTitleContentContainer>

@@ -13,12 +13,12 @@ const Router = () => {
       <Routers>
         <Switch>
           <Route exact path="/" component={LandingPage} />
-          <Route exact path="/projects" component={Projects} />
-          <Route exact path="/start" component={Start} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/project/:projectname/:reponame" component={ProjectDetail} />
-          <Route exact path="*" component={NotFoundPage} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/addproject" component={Start} />
+          <Route path="/login" component={Login} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/project/:projectname/:reponame" component={ProjectDetail} />
+          <Route path="*" component={NotFoundPage} />
         </Switch>
       </Routers>
     </Provider>
