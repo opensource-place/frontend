@@ -101,6 +101,7 @@ const BottomDiv = styled.div`
 const Readme = styled.div`
   padding: 1rem;
   width: 40%;
+  min-width: 500px;
   border: 2px solid rgba(60, 176, 155, 20%);
   border-radius: 30px;
   font-size: 12px;
@@ -132,6 +133,14 @@ const Label = styled.div`
   margin: 24px 0 8px 0;
 `
 
+const GithubDirecting = styled.a`
+  color: #4b7d74;
+  font-size: 2rem;
+  &:hover {
+    color: #4b7d74;
+  }
+`
+
 export {
   Container,
   Issues,
@@ -150,5 +159,6 @@ export {
   Readme,
   Text,
   TextB,
-  Label
+  Label,
+  GithubDirecting
 }

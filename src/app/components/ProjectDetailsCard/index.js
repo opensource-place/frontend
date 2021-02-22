@@ -18,8 +18,10 @@ import {
   Readme,
   Text,
   TextB,
-  Label
+  Label,
+  GithubDirecting
 } from './style'
+import './style.css'
 import { useParams } from 'react-router-dom'
 import { Progressbar, StyledButton } from '../index'
 import axios from 'axios'
@@ -88,6 +90,8 @@ const ProjectDetail = () => {
     )
     setContent(await res.data)
   }
+
+  const GithubUrl = `https://www.github.com/${projectname}/${reponame}`
   // const avatar = [
   //   repo.contributors[0].avatar_url,
   //   repo.contributors[1].avatar_url,
@@ -100,7 +104,7 @@ const ProjectDetail = () => {
     <Container>
       <Details>
         <DetailsLeft>
-          <h3 style={{ color: '#4B7D74' }}>{reponame}</h3>
+          <GithubDirecting href={GithubUrl}>{reponame}</GithubDirecting>
         </DetailsLeft>
         <DetailsMiddle>
           <Progressbar issues={issues} />
@@ -154,7 +158,19 @@ const ProjectDetail = () => {
       <BottomDiv>
         <Readme>
           <TextB>README.md</TextB>
-          <Markdown>{content}</Markdown>
+          <Markdown
+            options={{
+              overrides: {
+                img: {
+                  props: {
+                    className: 'foo'
+                  }
+                }
+              }
+            }}
+          >
+            {content}
+          </Markdown>
         </Readme>
         <Readme>
           <TextB>ISSUES</TextB>
