@@ -18,6 +18,7 @@ const Details = styled.div`
   padding: 1rem;
   margin: 0 0 5rem;
   width: auto;
+  min-width: 40%;
   height: 12rem;
   border: 2px solid rgba(60, 176, 155, 20%);
 `
@@ -64,6 +65,11 @@ const IssuesDetailLeft = styled.div`
 
 const DetailsLeft = styled.div`
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
 `
 const DetailsMiddle = styled.div`
   margin: 0 15px;
@@ -141,6 +147,14 @@ const GithubDirecting = styled.a`
     color: #4b7d74;
   }
 `
+const UserDirecting = styled.a`
+  color: rgba(0, 0, 0, 0.35);
+  font-weight: 600;
+  &:hover {
+    color: #4b7d74;
+    cursor: pointer;
+  }
+`
 
 export {
   Container,
@@ -161,5 +175,6 @@ export {
   Text,
   TextB,
   Label,
-  GithubDirecting
+  GithubDirecting,
+  UserDirecting
 }

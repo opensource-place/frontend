@@ -19,7 +19,8 @@ import {
   Text,
   TextB,
   Label,
-  GithubDirecting
+  GithubDirecting,
+  UserDirecting
 } from './style'
 import './style.css'
 import { useParams } from 'react-router-dom'
@@ -105,6 +106,9 @@ const ProjectDetail = () => {
       <Details>
         <DetailsLeft>
           <GithubDirecting href={GithubUrl}>{reponame}</GithubDirecting>
+          <UserDirecting href={`https://www.github.com/${projectname}`}>
+            {projectname}
+          </UserDirecting>
         </DetailsLeft>
         <DetailsMiddle>
           <Progressbar issues={issues} />
