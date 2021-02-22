@@ -8,6 +8,7 @@ import './style.css'
 
 const Header = styled.div`
   display: grid;
+  margin: 6rem 0;
   grid-template-columns: 50% 50%;
   flex-wrap: wrap;
   align-items: center;
@@ -208,7 +209,7 @@ const LandingPage = () => {
               </ButtonLeft>
             </HeaderLeft>
             <HeaderRight>
-              <CardImg src={front}/>
+              <CardImg src={front} />
             </HeaderRight>
           </Header>
         </Center>
@@ -250,7 +251,9 @@ const LandingPage = () => {
           </Descprojectcard>
         </Subdescription>
         <Soon>
-          <ButtomTitle>Lets fly to <GreenText>open source place</GreenText></ButtomTitle>
+          <ButtomTitle>
+            Lets fly to <GreenText>open source place</GreenText>
+          </ButtomTitle>
           <HeroTitleContent>For us, open source is a life-style.</HeroTitleContent>
           <Link to="/projects">
             <CustomButton>Lets fly 🛸</CustomButton>
