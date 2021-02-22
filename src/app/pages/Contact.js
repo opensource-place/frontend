@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavBar } from '../components'
 import styled from 'styled-components'
+import Footer from '../components/Footer'
 
 const Container = styled.div`
   display: flex;
@@ -8,6 +9,7 @@ const Container = styled.div`
   justify: center;
   width: 100%;
   height: 90vh;
+  margin-top:90px;
 `
 
 const HeroTitle = styled.h1`
@@ -86,6 +88,8 @@ const Start = () => {
           <Button>
             <Go href="https://findmentor.network">Find mentor&mentee</Go>
           </Button>
+
+        <Footer></Footer>
         </Soon>
       </Container>
     </>
