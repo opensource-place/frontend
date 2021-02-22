@@ -37,17 +37,9 @@ export const Center = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  @media screen and (min-width: 1024px) {
-    height: 100%;
-  }
 
-  @media screen and (min-width: 768px) {
-    width: 100%;
-  }
-
-  @media screen and (min-width: 320px) {
-    width: 100%;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
   }
 `
 
