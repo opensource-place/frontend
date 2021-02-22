@@ -1,7 +1,7 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter as Routers, Route, Switch } from 'react-router-dom'
 import axios from 'axios'
-import { Projects, LandingPage, Start, Login, ProjectDetail, Contact } from './pages'
+import { Projects, LandingPage, Start, Login, ProjectDetail, Contact, NotFoundPage } from './pages'
 import { Provider } from 'react-redux'
 import storex from './redux/store'
 
@@ -10,14 +10,17 @@ const Router = () => {
 
   return (
     <Provider store={storex}>
-      <BrowserRouter>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/start" component={Start} />
-        <Route path="/login" component={Login} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/project/:projectname/:reponame" component={ProjectDetail} />
-      </BrowserRouter>
+      <Routers>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/addproject" component={Start} />
+          <Route path="/login" component={Login} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/project/:projectname/:reponame" component={ProjectDetail} />
+          <Route path="*" component={NotFoundPage} />
+        </Switch>
+      </Routers>
     </Provider>
   )
 }
