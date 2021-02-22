@@ -10,7 +10,7 @@ const Footer = () => (
       <Link as="a" style={{ color: 'rgb(75, 125, 116)', marginRight: '0.5rem' }}>
         Documents
       </Link>
-      <Link to="/contacts" style={{ color: 'rgb(75, 125, 116)' }}>
+      <Link to="/contact" style={{ color: 'rgb(75, 125, 116)' }}>
         Contacts
       </Link>
     </div>

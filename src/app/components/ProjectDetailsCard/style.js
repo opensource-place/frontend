@@ -130,6 +130,7 @@ const Label = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 24px 0 8px 0;
 `
 
