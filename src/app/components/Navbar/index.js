@@ -6,6 +6,17 @@ import { Wrapper, ItemsWrapper, LogoAndText, Menus, NavItem, NavTitle } from './
 const Navbar = styled.nav`
   padding: 0.5rem 10%;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem 5px;
+  }
+`
+const LogoImg = styled.img`
+  width: 35px;
+
+  @media screen and (max-width: 768px) {
+    width: 38px;
+  }
 `
 
 export const NavBar = () => (
@@ -14,7 +25,7 @@ export const NavBar = () => (
       <ItemsWrapper>
         <Link to="/">
           <LogoAndText>
-            <img width="35px" src="/logo.png" alt="Our Logo" />
+            <LogoImg src="/logo.png" alt="Our Logo"/>
             <NavTitle>Open Source Place</NavTitle>
           </LogoAndText>
         </Link>

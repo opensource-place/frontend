@@ -17,7 +17,6 @@ const Wrapper = styled.div`
   color: '#21403A';
   width: 1rem;
 `
-
 const Link = styled.button`
   text-decoration: none;
   margin-left: 2%;

@@ -13,45 +13,54 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   background-color: #fff;
-  @media screen and (min-width: 1024px) {
-    width: 100%;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 100%;
-  }
-
-  @media screen and (min-width: 320px) {
-    width: 100%;
-  }
 `
 const ItemsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 const LogoAndText = styled.div`
   display: flex;
   align-items: center;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 30px;
 `
 const Menus = styled.div`
   margin-right: 5px;
   display: flex;
   margin-left: auto;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+    padding-top: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 `
 const NavItem = styled.div`
   margin-left: 25px;
   color: '#1FB79B' !important;
   font-weight: 600;
+
+  @media screen and (max-width: 768px) {
+    margin: 10px;
+  }
 `
 const NavTitle = styled.div`
   margin-left: 10px;
   font-size: 18px;
   color: #1fb79b;
+
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+  }
 `
 
 export { Container, Wrapper, ItemsWrapper, LogoAndText, Menus, NavItem, NavTitle }
