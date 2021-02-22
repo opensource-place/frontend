@@ -20,7 +20,7 @@ export const NavBar = () => (
         </Link>
         <Menus id="mobileMenu">
           <NavItem>
-            <Link to="/start" style={{ color: '#1FB79B' }}>
+            <Link to="/addproject" style={{ color: '#1FB79B' }}>
               Add Project
             </Link>
           </NavItem>
