@@ -134,7 +134,8 @@ const ProjectDetail = () => {
                   key={i}
                   bcolor={`#${label.color}`}
                   border="0px"
-                  margin="3px"
+                  margin="10px"
+                  marging="3px"
                   radius="30px"
                   color="#fff"
                   width="124px"
