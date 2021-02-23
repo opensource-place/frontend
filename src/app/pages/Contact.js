@@ -4,15 +4,11 @@ import styled from 'styled-components'
 import Footer from '../components/Footer'
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 `
 
 const HeroTitle = styled.h1`
-  max-width:846px;
-  margin: 20px auto;
+  margin-top:10rem;
   text-align: center;
   font-size: 2.6rem;
   font-weight: 700;
@@ -29,7 +25,7 @@ const HeroTitleContent = styled.p`
   font-size: 1.2rem;
   text-align: center;
   line-height: 1.4;
-  width: 50%;
+  max-width: 647px;
   color-opaticy: 10%;
   color: #72aea3;
   margin-bottom: 3rem;
@@ -80,7 +76,7 @@ const Start = () => {
             allowTransparency="true"
             frameBorder="0"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            style={{ marginBottom: '1rem' }}
+            style={{ marginBottom: '3rem', maxWidth: '80%' }}
           />
           <Button>
             <Go href="https://findmentor.network">Find mentor&mentee</Go>
