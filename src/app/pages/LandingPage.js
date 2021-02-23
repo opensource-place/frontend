@@ -192,7 +192,7 @@ const LandingPage = () => {
     <>
       <Container>
         <NavBar />
-        <Center style={{ marginTop: '8rem' }}>
+        <Center style={{ marginTop: '10rem' }}>
           <Header>
             <HeaderLeft>
               <HeroTitle>A project platform for the worlds open source supports</HeroTitle>

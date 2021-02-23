@@ -78,7 +78,7 @@ const Start = () => {
             gotta jump on our discord channel
           </HeroTitleContent>
           <Button>
-            <Go href="https://findmentor.network" target="_blank">Find mentor&mentee</Go>
+            <Go href="https://findmentor.network">Find mentor&mentee</Go>
           </Button>
           <iframe
             src="https://discord.com/widget?id=786277089577402418&amp;theme=dark"

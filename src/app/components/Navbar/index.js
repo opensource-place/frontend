@@ -45,7 +45,7 @@ export const NavBar = () => (
             </Link>
           </NavItem>
           <NavItem>
-            <a href="https://docs.opensource.place/" target="_blank" style={{ color: '#1FB79B' }}>
+            <a href="https://docs.opensource.place/" style={{ color: '#1FB79B' }}>
               Documents
             </a>
           </NavItem>
