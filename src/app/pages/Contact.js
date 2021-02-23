@@ -6,14 +6,13 @@ import Footer from '../components/Footer'
 const Container = styled.div`
   display: flex;
   align-items: center;
-  justify: center;
+  justify-content: center;
   width: 100%;
-  height: 90vh;
-  margin-top:90px;
 `
 
 const HeroTitle = styled.h1`
-  width: 60%;
+  max-width:846px;
+  margin: 20px auto;
   text-align: center;
   font-size: 2.6rem;
   font-weight: 700;
@@ -44,7 +43,6 @@ const Soon = styled.div`
   width: 100%;
 `
 const Button = styled.div`
-  display: flex;
   margin: 2rem 1rem;
 `
 
@@ -78,7 +76,6 @@ const Start = () => {
           </HeroTitleContent>
           <iframe
             src="https://discord.com/widget?id=786277089577402418&amp;theme=dark"
-            width="450"
             height="400"
             allowTransparency="true"
             frameBorder="0"
