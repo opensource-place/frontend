@@ -181,7 +181,7 @@ const GreenText = styled.span`
 `
 const CardImg = styled.img`
   width: auto;
-  height: 500px;
+  height: 400px;
 
   @media screen and (max-width: 768px) {
     height: 300px;
@@ -193,7 +193,7 @@ const LandingPage = () => {
     <>
       <Container>
         <NavBar />
-        <Center>
+        <Center style={{ marginTop: '10rem' }}>
           <Header>
             <HeaderLeft>
               <HeroTitle>A project platform for the worlds open source supports</HeroTitle>

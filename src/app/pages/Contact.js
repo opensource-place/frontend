@@ -8,12 +8,12 @@ const Container = styled.div`
   align-items: center;
   justify: center;
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
   margin-top:90px;
+
 `
 
 const HeroTitle = styled.h1`
-  width: 60%;
   text-align: center;
   font-size: 2.6rem;
   font-weight: 700;
@@ -33,7 +33,7 @@ const HeroTitleContent = styled.p`
   width: 50%;
   color-opaticy: 10%;
   color: #72aea3;
-  margin-bottom: 3rem;
+  margin-bottom: .2rem;
 `
 
 const Soon = styled.div`
@@ -63,6 +63,7 @@ const Go = styled.a`
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0px 1px 1px #ccc;
+  ::hover{color:white!important}
 `
 
 const Start = () => {
@@ -71,11 +72,14 @@ const Start = () => {
       <NavBar />
       <Container>
         <Soon>
-          <HeroTitle>You can join this channel to communicate with each other.</HeroTitle>
+          <HeroTitle>You can join this channel <br/>to communicate with each other.</HeroTitle>
           <HeroTitleContent>
-            Do you want to be a mentor & mentee while creating projects or contributing? So you
+            Do you want to be a mentor & mentee while creating projects or contributing? <br/>So you
             gotta jump on our discord channel
           </HeroTitleContent>
+          <Button>
+            <Go href="https://findmentor.network">Find mentor&mentee</Go>
+          </Button>
           <iframe
             src="https://discord.com/widget?id=786277089577402418&amp;theme=dark"
             width="450"
@@ -83,12 +87,8 @@ const Start = () => {
             allowTransparency="true"
             frameBorder="0"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            style={{ marginBottom: '1rem' }}
+            style={{ marginBottom: '3rem' }}
           />
-          <Button>
-            <Go href="https://findmentor.network">Find mentor&mentee</Go>
-          </Button>
-
         <Footer></Footer>
         </Soon>
       </Container>

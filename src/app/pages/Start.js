@@ -63,12 +63,17 @@ const CustomButton = styled.button`
 
 const Input = styled.input`
   width: 60%;
-  height: 5rem;
+  /* height: 2rem; */
   background-color: #fff;
-  padding: 2rem 6rem;
-  border-radius: 8px;
+  padding: 1rem;
+  border-radius: .5rem;
   border: 1px solid #63d0ab;
+  -webkit-transition: all 0.15s;
   transition: all 0.15s;
+  color: #209c85;
+ ::placeholder,
+  ::-webkit-input-placeholder {
+    color: #ccc;
 `
 const HeroTitleContentContainer = styled.div`
   display: flex;
