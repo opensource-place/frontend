@@ -156,3 +156,7 @@
   border-radius: 8px;
   background-color: #63cfab;
 }
+
+a:hover {
+  color: #206959;;
+}
