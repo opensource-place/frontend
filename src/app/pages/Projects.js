@@ -22,7 +22,7 @@ const Projects = () => {
   return (
     <>
       <NavBar />
-      <Containerx style={{ minHeight: '80vh' }}>
+      <Containerx>
         <MainContainer>
           <div className="ais-InstantSearch">
             <InstantSearch indexName="repository" searchClient={searchClient}>

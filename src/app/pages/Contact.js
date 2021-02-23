@@ -10,7 +10,7 @@ const Container = styled.div`
   width: 100%;
   min-height: 90vh;
   margin-top:90px;
-  margin-bottom: 5rem;
+
 `
 
 const HeroTitle = styled.h1`
@@ -63,6 +63,7 @@ const Go = styled.a`
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0px 1px 1px #ccc;
+  ::hover{color:white!important}
 `
 
 const Start = () => {
@@ -77,7 +78,7 @@ const Start = () => {
             gotta jump on our discord channel
           </HeroTitleContent>
           <Button>
-            <Go href="https://findmentor.network">Find mentor&mentee</Go>
+            <Go href="https://findmentor.network" target="_blank">Find mentor&mentee</Go>
           </Button>
           <iframe
             src="https://discord.com/widget?id=786277089577402418&amp;theme=dark"
@@ -86,7 +87,7 @@ const Start = () => {
             allowTransparency="true"
             frameBorder="0"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            style={{ marginBottom: '1rem' }}
+            style={{ marginBottom: '3rem' }}
           />
         <Footer></Footer>
         </Soon>
