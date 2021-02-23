@@ -27,9 +27,14 @@
         width:100%;
         flex-wrap:wrap;
         margin-bottom: 0.5rem;
+        padding: 0px;
     }
     .ais-Pagination-item {
-        width: 2rem !important;
+        width: 1.7rem !important;
+    }
+    .ais-Pagination-link {
+        padding: 0.5rem 0.5rem !important;
+        text-align: center;
     }
   }
 
