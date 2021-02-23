@@ -16,7 +16,7 @@ const Details = styled.div`
   border-radius: 30px;
   color: white;
   padding: 1rem;
-  margin: 0 0 5rem;
+  margin: 2.5rem 0 5rem;
   width: auto;
   min-width: 40%;
   height: 12rem;
