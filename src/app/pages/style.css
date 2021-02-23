@@ -1,3 +1,43 @@
+@media screen and (max-width: 768px) {
+    .ais-InstantSearch {
+        margin-top: 5rem;
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+        flex-wrap:wrap;
+    }
+    .left-panel {
+        align-items:center;
+        padding: 0.5rem;
+        width:100% !important;
+    }
+    .right-panel {
+        align-items:center;
+        padding: 0.5rem;
+        width:100% !important;
+    }
+    .ais-Hits-list {
+        padding: 0;
+        justify-content:center !important;
+    }
+    .ais-RefinementList-list {
+        width: 100% !important;
+    }
+    .ais-Pagination-list {
+        width:100%;
+        flex-wrap:wrap;
+        margin-bottom: 0.5rem;
+        padding: 0px;
+    }
+    .ais-Pagination-item {
+        width: 1.7rem !important;
+    }
+    .ais-Pagination-link {
+        padding: 0.5rem 0.5rem !important;
+        text-align: center;
+    }
+  }
+
 .ais-InstantSearch {
   display: flex;
   width: 100%;

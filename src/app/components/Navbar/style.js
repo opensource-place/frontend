@@ -39,7 +39,7 @@ const Menus = styled.div`
 
   @media screen and (max-width: 768px) {
     margin: 0 auto;
-    padding-top: 25px;
+    padding-top: 1rem;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -50,7 +50,7 @@ const NavItem = styled.div`
   font-weight: 600;
 
   @media screen and (max-width: 768px) {
-    margin: 10px;
+    margin: 0.5rem;
   }
 `
 const NavTitle = styled.div`
