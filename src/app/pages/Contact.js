@@ -9,8 +9,7 @@ const Container = styled.div`
   justify: center;
   width: 100%;
   min-height: 90vh;
-  margin-top:90px;
-
+  margin-top: 90px;
 `
 
 const HeroTitle = styled.h1`
@@ -33,7 +32,11 @@ const HeroTitleContent = styled.p`
   width: 50%;
   color-opaticy: 10%;
   color: #72aea3;
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 1rem 1rem 0;
+  }
 `
 
 const Soon = styled.div`
@@ -42,6 +45,9 @@ const Soon = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  @media screen and (max-width: 768px) {
+    margin-top: 3rem;
+  }
 `
 const Button = styled.div`
   display: flex;
@@ -63,7 +69,9 @@ const Go = styled.a`
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0px 1px 1px #ccc;
-  ::hover{color:white!important}
+  ::hover {
+    color: white !important;
+  }
 `
 
 const Start = () => {
@@ -72,10 +80,13 @@ const Start = () => {
       <NavBar />
       <Container>
         <Soon>
-          <HeroTitle>You can join this channel <br/>to communicate with each other.</HeroTitle>
+          <HeroTitle>
+            You can join this channel <br />
+            to communicate with each other.
+          </HeroTitle>
           <HeroTitleContent>
-            Do you want to be a mentor & mentee while creating projects or contributing? <br/>So you
-            gotta jump on our discord channel
+            Do you want to be a mentor & mentee while creating projects or contributing? <br />
+            So you gotta jump on our discord channel
           </HeroTitleContent>
           <Button>
             <Go href="https://findmentor.network">Find mentor&mentee</Go>
@@ -87,9 +98,9 @@ const Start = () => {
             allowTransparency="true"
             frameBorder="0"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            style={{ marginBottom: '3rem' }}
+            style={{ marginBottom: '3rem', maxWidth: '80%' }}
           />
-        <Footer></Footer>
+          <Footer></Footer>
         </Soon>
       </Container>
     </>

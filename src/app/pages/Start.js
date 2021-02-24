@@ -19,6 +19,10 @@ const ContentTop = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    margin-top: 2rem;
+  }
 `
 
 const HeroTitle = styled.h1`
@@ -32,6 +36,9 @@ const HeroTitle = styled.h1`
   font-weight: 600;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
 `
 const HeroTitleContent = styled.p`
   display: flex;
@@ -45,6 +52,10 @@ const ContentBottom = styled.div`
   align-items: center;
   width: 100%;
   margin-top: 2rem;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 1rem;
+  }
 `
 const CustomButton = styled.button`
   margin-top: 2rem;
@@ -59,26 +70,33 @@ const CustomButton = styled.button`
   &:hover {
     background-color: #54ac8d;
   }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
 `
 
 const Input = styled.input`
   width: 60%;
-  /* height: 2rem; */
   background-color: #fff;
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: 1px solid #63d0ab;
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
   color: #209c85;
- ::placeholder,
+  ::placeholder,
   ::-webkit-input-placeholder {
     color: #ccc;
+  }
 `
 const HeroTitleContentContainer = styled.div`
   display: flex;
   justify-content: center;
   margin: 4rem 0 2rem 0;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 const HeroTitleContentRight = styled.div`
@@ -87,11 +105,26 @@ const HeroTitleContentRight = styled.div`
   justify-content: center;
   margin-left: 1rem;
   width: 60%;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+  }
 `
 
 const HeroTitleContentLeft = styled.div`
   display: flex;
   width: 40%;
+
+  @media screen and (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+  }
 `
 
 const Start = () => {
